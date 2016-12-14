@@ -1,50 +1,55 @@
 package org.fundacion.automation.projects;
 
-
-import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
+import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.projects.ProjectMenuPage;
-
-
+import org.fundacion.pages.projects.ProjectsWorkSpacesPage;
 import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertFalse;
 
-/**
- * Unit test for simple App.
- */
-public class TestCreateProject
+public class TestDeleteProject {
+  ProjectMenuPage projectMenu;
+  WebDriver driver;
 
-{
-
-  @Test
-  public void verifyIfProjectIsCreated() {
+  @BeforeMethod
+  public void testCreateProject() {
     System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
-    WebDriver driver = new ChromeDriver();
+    driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     driver.get("https://www.pivotaltracker.com/signin");
 
     LoginPage login = new LoginPage(driver);
-    login.setUserName("fernando.iquiza@fundacion-jala.org");
+    login.setUserName("sergio.landa@fundacion-jala.org");
     login.clickContinue();
-    login.setPassword("MTat676435019");
+    login.setPassword("P@ssw0rd");
     HomePage home = login.clickSubmit();
     CreateProjectPage project = home.clickCreateProject();
-    project.setProjectName("ProjectCreated");
+    project.setProjectName("test01");
     project.clickSelectAccount("Fundacion Jala");
-    ProjectMenuPage projectMenu = project.clickCreate();
+    projectMenu = project.clickCreate();
+  }
 
-    assertTrue(projectMenu.verifyProjectName("ProjectCreated"), "Error the name of the project is different. ");
+  @Test
+  public void testDeleteProject() {
+
     SettingsPage settingsPage = projectMenu.clickSettings();
-    settingsPage.deleteProject();
+
+    HomePage homePage = settingsPage.deleteProject();
+    ProjectsWorkSpacesPage projectsWorkSpacesPage = homePage.clickProjectsAndWorkSpaces();
+    projectsWorkSpacesPage.clickLinkShowProjects();
+    assertFalse(projectsWorkSpacesPage.existProject("test01"));
+  }
+
+  @AfterClass
+  public void close() {
     driver.quit();
   }
 

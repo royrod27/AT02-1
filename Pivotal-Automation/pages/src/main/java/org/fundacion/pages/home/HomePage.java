@@ -1,6 +1,8 @@
 package org.fundacion.pages.home;
 
+import org.fundacion.model.home.HomeModel;
 import org.fundacion.pages.projects.CreateProjectPage;
+import org.fundacion.pages.projects.ProjectsWorkSpacesPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,22 +13,28 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class HomePage {
 
-    private WebDriver driver;
+  private WebDriver driver;
 
-    @FindBy(css = "#elm-root > div > div.DashboardV2__Tabs__background > div > div.DashboardV2__Tabs__ActionButton > button")
-    WebElement createProjectBtn;
+  @FindBy(xpath = HomeModel.createProjectBtn)
+  WebElement createProjectBtn;
 
-    public HomePage(WebDriver driver)
-    {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+  @FindBy(xpath = HomeModel.pivotalBtn)
+  private WebElement pivotalBtn;
 
-    public CreateProjectPage clickCreateProject(){
-        createProjectBtn.click();
-        return new CreateProjectPage(this.driver);
-    }
+  public HomePage(WebDriver driver) {
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+  }
 
+  public CreateProjectPage clickCreateProject() {
+    createProjectBtn.click();
+    return new CreateProjectPage(this.driver);
+  }
+
+  public ProjectsWorkSpacesPage clickProjectsAndWorkSpaces() {
+    pivotalBtn.click();
+    return new ProjectsWorkSpacesPage(driver);
+  }
 
 
 }
