@@ -1,4 +1,6 @@
 org\fundacion\pages\projects\CreateProjectPage.class
 org\fundacion\pages\projects\ProjectMenuPage.class
+org\fundacion\pages\projects\SettingsPage.class
+org\fundacion\pages\projects\ProjectsWorkSpacesPage.class
 org\fundacion\pages\login\LoginPage.class
 org\fundacion\pages\home\HomePage.class
