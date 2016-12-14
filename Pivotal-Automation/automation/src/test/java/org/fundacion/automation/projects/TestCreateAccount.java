@@ -25,8 +25,6 @@ public class TestCreateAccount {
   private String nameProject = "ProjectCreateNew3";
   private String nameAccount = "AccountNew3";
   List data = new ArrayList();
-  ;
-
 
   @Test
   public void createProjectWithNewAccountTest() {
@@ -48,7 +46,6 @@ public class TestCreateAccount {
     assertTrue(settingProject.contentNameAccount(nameAccount), "Error the name of the account is diferent.");
     settingProject.deleteProject();
     driver.quit();
-
   }
 
 }

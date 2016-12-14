@@ -21,14 +21,11 @@ public class CreateProjectPage {
   @FindBy(css = CreateProjectModel.createBtn)
   WebElement createBtn;
 
-  @FindBy(css = CreateProjectModel.selectAccountItem)
-  WebElement selectAccount;
-
   @FindBy(css = CreateProjectModel.menuButton)
   WebElement menuAccountButton;
 
-  @FindBy(css = "div.tc-account-selector__options")
-  WebElement selector;
+  @FindBy(css = CreateProjectModel.selectorAccount)
+  WebElement selectorAccount;
 
   @FindBy(css = CreateProjectModel.accountItem)
   WebElement accountItem;
@@ -36,10 +33,10 @@ public class CreateProjectPage {
   @FindBy(xpath = CreateProjectModel.typeProject)
   List<WebElement> typeProject;
 
-  @FindBy(xpath = "//div[1]/div[2]/span")
+  @FindBy(xpath = CreateProjectModel.projectNewAccount)
   WebElement projectNewAccount;
 
-  @FindBy(xpath = "//fieldset/div/div/input")
+  @FindBy(xpath = CreateProjectModel.projectNameNewAccount)
   WebElement projectNameNewAccount;
 
   public CreateProjectPage(WebDriver driver) {
@@ -59,7 +56,7 @@ public class CreateProjectPage {
   public void clickSelectAccount(String accountName) {
     menuAccountButton.click();
 
-    accountItem = selector.findElement(By.xpath("//div[text()= '" + accountName + "']"));
+    accountItem = selectorAccount.findElement(By.xpath("//div[text()= '" + accountName + "']"));
     accountItem.click();
   }
 

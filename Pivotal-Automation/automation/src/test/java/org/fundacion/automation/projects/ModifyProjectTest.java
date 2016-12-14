@@ -21,14 +21,13 @@ public class ModifyProjectTest {
   public void setup() {
     System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
     driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     driver.get("https://www.pivotaltracker.com/signin");
   }
 
   @Test
   public void testCreateProject() {
-
     LoginPage login = new LoginPage(driver);
 
     login.setUserName("gualy_vc@hotmail.com");
@@ -51,10 +50,6 @@ public class ModifyProjectTest {
 
     //Deleting the project
     settingsPage.deleteProject();
-  }
-
-  @AfterMethod
-  public void close() {
     driver.quit();
   }
 

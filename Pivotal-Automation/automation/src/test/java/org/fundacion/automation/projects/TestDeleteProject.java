@@ -39,9 +39,7 @@ public class TestDeleteProject {
 
   @Test
   public void testDeleteProject() {
-
     SettingsPage settingsPage = projectMenu.clickSettings();
-
     HomePage homePage = settingsPage.deleteProject();
     ProjectsWorkSpacesPage projectsWorkSpacesPage = homePage.clickProjectsAndWorkSpaces();
     projectsWorkSpacesPage.clickLinkShowProjects();

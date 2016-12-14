@@ -21,23 +21,21 @@ public class CreatePrivateProjectTest {
   HomePage home;
 
   @BeforeMethod
-  public void configure() {
+  public void setup() {
     System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
     driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(14, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     driver.get("https://www.pivotaltracker.com/signin");
+  }
+
+  @Test(priority = 2)
+  public void exampleTestNg() {
     LoginPage login = new LoginPage(driver);
     login.setUserName("Roy.Rodriguez@fundacion-jala.org");
     login.clickContinue();
     login.setPassword("Sabbath27");
     home = login.clickSubmit();
-  }
-
-
-  @Test(priority = 2)
-  public void exampleTestNg() {
-
     CreateProjectPage project = home.clickCreateProject();
     String nameOfProject = "projectTestTwo";
     project.setProjectName(nameOfProject);
@@ -50,11 +48,7 @@ public class CreatePrivateProjectTest {
 
     assertTrue(isPrivate, "project is not private");
     settingsPage.deleteProject();
-
-  }
-
-  @AfterMethod
-  public void close() {
     driver.quit();
+
   }
 }

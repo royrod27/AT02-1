@@ -7,6 +7,7 @@ import org.fundacion.pages.projects.ProjectMenuPage;
 import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -18,13 +19,18 @@ import static org.testng.Assert.assertFalse;
  * Created by Administrator on 12/13/2016.
  */
 public class CreatePublicProjectTest {
-  @Test
-  public void testCreatePublicProject() {
+  WebDriver driver;
+  @BeforeMethod
+  public void setup() {
     System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
     WebDriver driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     driver.get("https://www.pivotaltracker.com/signin");
+  }
+  @Test
+  public void testCreatePublicProject() {
+
 
     LoginPage login = new LoginPage(driver);
     login.setUserName("jorge.forero@fundacion-jala.org");

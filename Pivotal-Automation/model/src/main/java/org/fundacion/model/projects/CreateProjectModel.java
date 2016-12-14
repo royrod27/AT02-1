@@ -25,4 +25,11 @@ public class CreateProjectModel {
 
   public static final String accountItem = "//div[text()= '";
 
+  public static final String projectNewAccount = "//div[1]/div[2]/span";
+
+  public static final String projectNameNewAccount = "//fieldset/div/div/input";
+
+  public static final String selectorAccount = "div.tc-account-selector__options";
+
+
 }
