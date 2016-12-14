@@ -35,8 +35,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                     <suiteXmlFiles>
-                           <suiteXmlFile>src/resource/testsuites/testngsuite.xml</suiteXmlFile>
+                    <reportsDirectory>reports/reportNG</reportsDirectory>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter,
+                                org.uncommons.reportng.JUnitXMLReporter
+                            </value>
+                        </property>
+                    </properties>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/resource/testsuites/testngsuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
