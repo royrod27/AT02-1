@@ -2,7 +2,12 @@ package org.fundacion.common.listener;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+
+import com.aventstack.extentreports.Status;
+
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import org.fundacion.common.drivers.Driver;
 import org.fundacion.common.utilities.Screenshot;
@@ -19,6 +24,8 @@ public class ExtentListener implements ITestListener {
   WebDriver driver;
   Screenshot screenshot = new Screenshot();
 
+  private SimpleDateFormat formatter = new SimpleDateFormat("MMddyyyy hh-mm-ss");
+  private Calendar now = Calendar.getInstance();
   private static ExtentReports extent = ExtentManager
           .createInstance("../automation/reports/extentReport/report.html");
   private static ThreadLocal<ExtentTest> parentTest = new ThreadLocal();
@@ -32,19 +39,22 @@ public class ExtentListener implements ITestListener {
 
   public void onTestSuccess(ITestResult testResult) {
     test.get().pass("Test passed");
-
   }
 
   /**
    * TestFailure.
+   *
    * @param testResult result of test.
    */
   public void onTestFailure(ITestResult testResult) {
     test.get().fail(testResult.getThrowable());
 
+
     driver = Driver.getDriver().openBrowser();
     try {
-      screenshot.capture(driver, testResult);
+      test.get().log(Status.FAIL, testResult.getName() + "_"
+              + formatter.format(now.getTime()) + ".png")
+              .addScreenCaptureFromPath(screenshot.capture(driver, testResult));
     } catch (IOException exception) {
       exception.printStackTrace();
     }
