@@ -6,6 +6,8 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import java.net.UnknownHostException;
+
 
 /**
  * Created by Administrator on 12/14/2016.
@@ -16,6 +18,7 @@ public class ExtentManager {
 
   /**
    * getInstance.
+   *
    * @return instance
    */
   public static ExtentReports getInstance() {
@@ -27,6 +30,7 @@ public class ExtentManager {
 
   /**
    * Create new instance.
+   *
    * @param fileName name of file.
    * @return ExtentReports instance
    */
@@ -41,7 +45,15 @@ public class ExtentManager {
 
     extent = new ExtentReports();
     extent.attachReporter(htmlReporter);
-
+    extent.setSystemInfo("User Name", System.getProperty("user.name"));
+    extent.setSystemInfo("OS", System.getProperty("os.name"));
+    extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+    try {
+      java.net.InetAddress localMachine = java.net.InetAddress.getLocalHost();
+      extent.setSystemInfo("Host Name", localMachine.getHostName());
+    } catch (UnknownHostException exception) {
+      exception.printStackTrace();
+    }
     return extent;
   }
 }
