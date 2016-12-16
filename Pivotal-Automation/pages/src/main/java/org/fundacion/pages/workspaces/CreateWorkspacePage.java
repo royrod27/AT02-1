@@ -5,16 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by David on 12/15/2016.
  */
 public class CreateWorkspacePage {
   WebDriver driver;
+  WebDriverWait wait;
 
   public CreateWorkspacePage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
+    wait = new WebDriverWait(driver, 10);
   }
 
   @FindBy(css = CreateWorkspaceModel.workspaceName)

@@ -4,20 +4,20 @@ import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.workspaces.CreateWorkspacePage;
+import org.fundacion.pages.workspaces.SettingsWorkspacePage;
 import org.fundacion.pages.workspaces.WorkspacePage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
-
 /**
- * Created by David on 12/15/2016.
+ * Created by David on 12/16/2016.
  */
-public class TestCreateWorkspace {
+public class TestDeleteWorkspace {
   WebDriver driver;
 
   @Test
-  public void verifyWorkspaceIsCreated() {
+  public void verifyWorkspaceIsDeleted() {
+
     System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
     driver = Driver.getDriver().openBrowser();
     driver.get("https://www.pivotaltracker.com/signin");
@@ -29,8 +29,11 @@ public class TestCreateWorkspace {
 
 
     CreateWorkspacePage workspace = home.clickCreateWorkspaceLink();
-    workspace.setWorkspaceName("TestFromCode");
+    workspace.setWorkspaceName("TestToDelete");
     WorkspacePage workspacePage = workspace.clickCreateWorkspace();
-    assertTrue(workspacePage.workspaceTitle("TestFromCode"));
+    SettingsWorkspacePage settingsWorkspace = workspacePage.settingsWorkspace();
+    settingsWorkspace.deleteWorkspace();
+    settingsWorkspace.confirmDeleteWorkspace();
+
   }
 }
