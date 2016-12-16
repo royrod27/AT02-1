@@ -30,7 +30,7 @@ public class CreatePrivateProjectTest {
   }
 
   @Test(priority = 2)
-  public void exampleTestNg() {
+  public void createPrivateProject() {
     LoginPage login = new LoginPage(driver);
     login.setUserName("Roy.Rodriguez@fundacion-jala.org");
     login.clickContinue();
