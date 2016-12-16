@@ -3,6 +3,7 @@ package org.fundacion.pages.home;
 import org.fundacion.model.home.HomeModel;
 import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.projects.ProjectsWorkSpacesPage;
+import org.fundacion.pages.workspaces.CreateWorkspacePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,12 @@ public class HomePage {
   @FindBy(xpath = HomeModel.pivotalBtn)
   private WebElement pivotalBtn;
 
+  @FindBy(css = HomeModel.workspaceTab)
+  WebElement workspaceTab;
+
+  @FindBy(css = HomeModel.createWorkspaceButton)
+  WebElement createWorkspace;
+
   public HomePage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
@@ -36,5 +43,10 @@ public class HomePage {
     return new ProjectsWorkSpacesPage(driver);
   }
 
+  public CreateWorkspacePage clickCreateWorkspace() {
+    workspaceTab.click();
+    createWorkspace.click();
+    return new CreateWorkspacePage(driver);
+  }
 
 }
