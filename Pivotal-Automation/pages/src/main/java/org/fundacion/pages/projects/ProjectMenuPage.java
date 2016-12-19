@@ -22,6 +22,11 @@ public class ProjectMenuPage {
   @FindBy(css = ProjectMenuModel.settingButton)
   WebElement settingsBtn;
 
+  @FindBy(css = "li.item.epics > a > span")
+  WebElement epicsButton;
+
+  @FindBy(xpath = "//div/header/ul/li[3]/div")
+  WebElement projectProfileName;
 
   public ProjectMenuPage(WebDriver driver) {
     this.driver = driver;
@@ -33,8 +38,14 @@ public class ProjectMenuPage {
     return projectNameElement.getText().equalsIgnoreCase(projectName) ? true : false;
   }
 
+  public void clickProfileName(){
+    wait.until(ExpectedConditions.elementToBeClickable(projectProfileName));
+    projectProfileName.click();
+  }
+
   public SettingsPage clickSettings() {
     wait.until(ExpectedConditions.elementToBeClickable(projectNameElement));
+    wait.until(ExpectedConditions.elementToBeClickable(epicsButton));
     settingsBtn.click();
     return new SettingsPage(driver);
   }

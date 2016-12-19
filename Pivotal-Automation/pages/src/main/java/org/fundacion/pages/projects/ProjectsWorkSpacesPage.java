@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ProjectsWorkSpacesPage {
   WebDriver driver;
   WebDriverWait wait;
+  String nameOfProject;
 
   public ProjectsWorkSpacesPage(WebDriver driver) {
     this.driver = driver;
@@ -28,13 +29,21 @@ public class ProjectsWorkSpacesPage {
   @FindBy(xpath = ProjectsWorkSpacesModel.project)
   private WebElement project;
 
+//  @FindBy(xpath = "//div/header/ul/li[3]/div")
+//  WebElement projectProfileName;
 
-  public boolean existProject(String name) {
-    project = driver.findElement(By.xpath("//*[@id='project_rows']/ul/li/div/a[text()='" + name + "']"));
-    return wait.until(ExpectedConditions.visibilityOf(project)).getText().equalsIgnoreCase(name);
+  public boolean existProject() {
+    return project.getText().equalsIgnoreCase(nameOfProject);
   }
 
-  public void clickLinkShowProjects() {
+//  public void clickProfileName(){
+//    wait.until(ExpectedConditions.elementToBeClickable(projectProfileName));
+//    projectProfileName.click();
+//  }
+
+
+  public void clickLinkShowProjects(String nameOfProject) {
+    this.nameOfProject=nameOfProject;
     linkShowProjects.click();
   }
 }

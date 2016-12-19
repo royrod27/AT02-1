@@ -1,5 +1,6 @@
 package org.fundacion.automation.projects;
 
+import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.projects.CreateProjectPage;
@@ -14,26 +15,21 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertTrue;
 
 
-public class ModifyProjectTest {
+public class ModifyProjectTest extends Base {
   WebDriver driver;
-
-  @BeforeMethod
-  public void setup() {
-    System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
-    driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    driver.manage().window().maximize();
-    driver.get("https://www.pivotaltracker.com/signin");
-  }
+  HomePage home;
 
   @Test
   public void testCreateProject() {
+
+    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
+
     LoginPage login = new LoginPage(driver);
 
     login.setUserName("gualy_vc@hotmail.com");
     login.clickContinue();
     login.setPassword("password123");
-    HomePage home = login.clickSubmit();
+    home = login.clickSubmit();
     CreateProjectPage newProject = home.clickCreateProject();
 
     newProject.setProjectName("TestName");
@@ -47,10 +43,13 @@ public class ModifyProjectTest {
     assertTrue(driver.findElement(settingsPage.getTitleProject(projectNameChanged)).isDisplayed(),
             "Error the name of the project is different.");
 
-
     //Deleting the project
     settingsPage.deleteProject();
-    driver.quit();
+   // driver.quit();
   }
 
+  @AfterTest
+  public void logOutProfile(){
+    home.LogOut();
+  }
 }
