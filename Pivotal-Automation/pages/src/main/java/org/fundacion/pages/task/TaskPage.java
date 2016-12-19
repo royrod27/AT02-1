@@ -46,6 +46,9 @@ public class TaskPage {
     @FindBy(xpath = TaskModel.saveEdit)
     WebElement saveEditButtom;
 
+    @FindBy(xpath = TaskModel.buttonOk)
+    WebElement buttonOk;
+
 
     public TaskPage(WebDriver driver) {
         this.driver = driver;
@@ -86,6 +89,10 @@ public class TaskPage {
 
     public boolean contentNameTask(String nameAccount) {
         return listTask.getText().contains(nameAccount) ? true : false;
+    }
+
+    public void clickButtonOk() {
+        buttonOk.click();
     }
 
     public int sizeContentNameTask(String nameAccount) {
