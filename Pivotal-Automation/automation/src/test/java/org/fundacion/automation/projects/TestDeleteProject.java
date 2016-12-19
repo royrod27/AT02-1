@@ -1,5 +1,8 @@
 package org.fundacion.automation.projects;
 
+import org.fundacion.common.drivers.Driver;
+import org.fundacion.model.home.HomeModel;
+import org.fundacion.model.projects.ProjectsWorkSpacesModel;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.projects.CreateProjectPage;
@@ -17,22 +20,21 @@ import static org.testng.Assert.assertFalse;
 public class TestDeleteProject {
   ProjectMenuPage projectMenu;
   WebDriver driver;
+  String nameOfProject="test01";
+  HomePage homePage;
 
-  @BeforeMethod
-  public void testCreateProject() {
-    System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
-    driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-    driver.manage().window().maximize();
-    driver.get("https://www.pivotaltracker.com/signin");
 
+@BeforeMethod
+public void testCreateProject() {
+
+   driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
     LoginPage login = new LoginPage(driver);
     login.setUserName("sergio.landa@fundacion-jala.org");
     login.clickContinue();
     login.setPassword("P@ssw0rd");
     HomePage home = login.clickSubmit();
     CreateProjectPage project = home.clickCreateProject();
-    project.setProjectName("test01");
+    project.setProjectName(nameOfProject);
     project.clickSelectAccount("Fundacion Jala");
     projectMenu = project.clickCreate();
   }
@@ -40,15 +42,14 @@ public class TestDeleteProject {
   @Test
   public void testDeleteProject() {
     SettingsPage settingsPage = projectMenu.clickSettings();
-    HomePage homePage = settingsPage.deleteProject();
+     homePage = settingsPage.deleteProject();
     ProjectsWorkSpacesPage projectsWorkSpacesPage = homePage.clickProjectsAndWorkSpaces();
-    projectsWorkSpacesPage.clickLinkShowProjects();
-    assertFalse(projectsWorkSpacesPage.existProject("test01"));
+    projectsWorkSpacesPage.clickLinkShowProjects(nameOfProject);
+    assertFalse(projectsWorkSpacesPage.existProject());
   }
 
-  @AfterClass
-  public void close() {
-    driver.quit();
-  }
-
+@AfterTest
+  public void logOutProfile(){
+  homePage.LogOut();
+}
 }

@@ -3,6 +3,8 @@ package org.fundacion.common.drivers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Driver {
 
   private static Driver instance;
@@ -19,8 +21,11 @@ public class Driver {
    */
   public WebDriver openBrowser() {
     if (chrome == null) {
+      System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
       driver = new ChromeDriver();
+      driver.manage().timeouts().implicitlyWait(14, TimeUnit.SECONDS);
       driver.manage().window().maximize();
+      driver.get("https://www.pivotaltracker.com/signin");
       chrome = driver;
     } else if (chrome != null) {
       driver = chrome;

@@ -6,5 +6,5 @@ package org.fundacion.model.projects;
  */
 public class ProjectsWorkSpacesModel {
   public static final String linkShowProjects = "//span[text()='Show All Projects']";
-  public static final String project = "//*[@id='project_rows']/ul/li/div/a[text()='']";
+  public static final String project = "//*[@id='project_rows']/ul/li/div/a";
 }

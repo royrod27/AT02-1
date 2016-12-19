@@ -7,11 +7,10 @@
     <test name="Pivotal">
         <classes>
             <class name="org.fundacion.automation.projects.CreatePrivateProjectTest"/>
-            <!--<class name="org.fundacion.automation.projects.CreatePublicProjectTest"/>-->
+            <class name="org.fundacion.automation.projects.CreatePublicProjectTest"/>
             <class name="org.fundacion.automation.projects.ModifyProjectTest"/>
-            <!--<class name="org.fundacion.automation.projects.TestCreateAccount"/>-->
-            <!--<class name="org.fundacion.automation.projects.TestCreateProject"/>-->
-            <!--<class name="org.fundacion.automation.projects.TestDeleteProject"/>-->
+            <class name="org.fundacion.automation.projects.TestCreateAccount"/>
+            <class name="org.fundacion.automation.projects.TestDeleteProject"/>
         </classes>
     </test>
 </suite>

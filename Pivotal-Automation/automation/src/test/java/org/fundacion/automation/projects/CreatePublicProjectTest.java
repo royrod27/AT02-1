@@ -1,5 +1,6 @@
 package org.fundacion.automation.projects;
 
+import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.projects.CreateProjectPage;
@@ -7,8 +8,7 @@ import org.fundacion.pages.projects.ProjectMenuPage;
 import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,25 +18,19 @@ import static org.testng.Assert.assertFalse;
 /**
  * Created by Administrator on 12/13/2016.
  */
-public class CreatePublicProjectTest {
+public class CreatePublicProjectTest extends Base{
   WebDriver driver;
-  @BeforeMethod
-  public void setup() {
-    System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
-    WebDriver driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-    driver.manage().window().maximize();
-    driver.get("https://www.pivotaltracker.com/signin");
-  }
+  HomePage home;
+
   @Test
   public void testCreatePublicProject() {
-
-
+//    driver = Driver.getDriver().openBrowser();
+    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
     LoginPage login = new LoginPage(driver);
     login.setUserName("jorge.forero@fundacion-jala.org");
     login.clickContinue();
     login.setPassword("jb&11235");
-    HomePage home = login.clickSubmit();
+    home = login.clickSubmit();
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestPublic");
     project.clickSelectAccount("Maria");
@@ -50,6 +44,11 @@ public class CreatePublicProjectTest {
     assertFalse(isPrivate, "project is public");
     settingsPage.deleteProject();
 
-    driver.quit();
   }
+
+  @AfterTest
+  public void logOutProfile(){
+    home.LogOut();
+  }
+
 }
