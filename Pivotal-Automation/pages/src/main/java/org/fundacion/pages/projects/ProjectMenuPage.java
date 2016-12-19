@@ -1,6 +1,7 @@
 package org.fundacion.pages.projects;
 
 import org.fundacion.model.projects.ProjectMenuModel;
+import org.fundacion.pages.stories.SideBarStoriesPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,5 +54,9 @@ public class ProjectMenuPage {
   public ProjectsWorkSpacesPage clickProjectsAndWorkSpaces() {
     projectNameElement.click();
     return new ProjectsWorkSpacesPage(driver);
+  }
+
+  public SideBarStoriesPage sideBarStories() {
+    return new SideBarStoriesPage(driver);
   }
 }
