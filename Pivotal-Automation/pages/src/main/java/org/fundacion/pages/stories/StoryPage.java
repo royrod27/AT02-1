@@ -1,6 +1,7 @@
 package org.fundacion.pages.stories;
 
 import org.fundacion.model.story.StoryModel;
+import org.fundacion.pages.task.TaskPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -101,5 +102,9 @@ public class StoryPage {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+  }
+
+  public TaskPage clickCreateTask(WebDriver driver ) {
+       return new TaskPage(driver);
   }
 }
