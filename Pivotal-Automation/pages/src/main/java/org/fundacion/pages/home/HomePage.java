@@ -43,8 +43,11 @@ public class HomePage {
     return new ProjectsWorkSpacesPage(driver);
   }
 
-  public CreateWorkspacePage clickCreateWorkspaceLink() {
+  public void clickWorkspaceTab() {
     workspaceTab.click();
+  }
+  
+  public CreateWorkspacePage clickCreateWorkspaceLink() {
     createWorkspace.click();
     return new CreateWorkspacePage(driver);
   }

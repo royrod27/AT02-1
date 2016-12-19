@@ -37,5 +37,4 @@ public class CreateWorkspacePage {
     createWorkspaceButton.click();
     return new WorkspacePage(driver);
   }
-
 }

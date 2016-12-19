@@ -2,6 +2,7 @@ package org.fundacion.pages.workspaces;
 
 import org.fundacion.model.workspaces.SettingsWorkspaceModel;
 import org.fundacion.model.workspaces.WorkspaceModel;
+import org.fundacion.pages.home.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,6 +39,9 @@ public class WorkspacePage {
   @FindBy(xpath = WorkspaceModel.addRemoveOption)
   List<WebElement> addRemoveOption;
 
+  @FindBy(css = WorkspaceModel.homeLink)
+  WebElement homeLink;
+
   public boolean workspaceTitle(String title) {
 //    String expect = this.title.getText();
 //    String actual = title;
@@ -55,16 +59,18 @@ public class WorkspacePage {
     wait.until(ExpectedConditions.elementToBeClickable(addRemoveButton));
     addRemoveButton.click();
 
-    for (WebElement element:addRemoveOption) {
-      if(element.getAttribute("class").equals("add_projects")){
+    for (WebElement element : addRemoveOption) {
+      if (element.getAttribute("class").equals("add_projects")) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
       }
     }
-
-
-
-
     return new ManageWorkspacePage(driver);
+  }
+
+  public HomePage goToHome() {
+    wait.until(ExpectedConditions.elementToBeClickable(title));
+    homeLink.click();
+    return new HomePage(driver);
   }
 }
