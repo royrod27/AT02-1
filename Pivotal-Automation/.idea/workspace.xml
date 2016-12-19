@@ -39,8 +39,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testngsuite.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/src/resource/testsuites/testngsuite.xml">
+      <file leaf-file-name="AddWorkspaceProjects.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/AddWorkspaceProjects.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -192,10 +192,8 @@
         <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/projects/testProject.java" />
         <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/projects/TestProjects.java" />
         <option value="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/projects/ProjectsWorkSpacesModel.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/home/HomeModel.java" />
         <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/projects/TestCreateProject.java" />
         <option value="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/projects/SettingsModel.java" />
-        <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/home/HomePage.java" />
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/login/LoginPage.java" />
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/projects/ProjectMenuPage.java" />
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/projects/ProjectsWorkSpacesPage.java" />
@@ -207,7 +205,6 @@
         <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/projects/ModifyProjectTest.java" />
         <option value="$PROJECT_DIR$/automation/pom.xml" />
         <option value="$PROJECT_DIR$/automation/reports/extentReport/report.html" />
-        <option value="$PROJECT_DIR$/common/src/main/java/org/fundacion/common/listener/ExtentManager.java" />
         <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/projects/CreatePrivateProjectTest.java" />
         <option value="$PROJECT_DIR$/automation/src/resource/testsuites/testngsuite.xml" />
         <option value="$PROJECT_DIR$/common/src/main/java/org/fundacion/common/listener/ExtentListener.java" />
@@ -291,7 +288,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -317,7 +314,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -342,6 +339,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workspaces" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,7 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -383,7 +384,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utilities" />
+              <option name="myItemId" value="projects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -531,7 +532,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.infernus.idea.checkstyle.CheckStyleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/model/src/main/java/org/fundacion/model" />
@@ -560,7 +561,7 @@
     <configuration default="false" name="TestDeleteProject" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.fundacion.automation.projects.*" />
+          <option name="PATTERN" value="org.fundacion.automation.workspaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -568,8 +569,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="org.fundacion.automation.projects" />
-      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.projects.TestDeleteProject" />
+      <option name="PACKAGE_NAME" value="org.fundacion.automation.workspaces" />
+      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.workspaces.TestCreateWorkspace" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -590,10 +591,10 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="org.fundacion.automation.projects" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestDeleteWorkspace" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.fundacion.automation.projects.*" />
+          <option name="PATTERN" value="org.fundacion.automation.workspaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -601,41 +602,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="org.fundacion.automation.projects" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="CreatePrivateProjectTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.fundacion.automation.projects.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="automation" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="org.fundacion.automation.projects" />
-      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.projects.CreatePrivateProjectTest" />
+      <option name="PACKAGE_NAME" value="org.fundacion.automation.workspaces" />
+      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.workspaces.TestDeleteWorkspace" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -656,10 +624,10 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="ModifyProjectTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestDeleteWorkspace.verifyWorkspaceIsDeleted" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.fundacion.automation.projects.*" />
+          <option name="PATTERN" value="org.fundacion.automation.workspaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -667,8 +635,41 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="org.fundacion.automation.projects" />
-      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.projects.ModifyProjectTest" />
+      <option name="PACKAGE_NAME" value="org.fundacion.automation.workspaces" />
+      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.workspaces.TestDeleteWorkspace" />
+      <option name="METHOD_NAME" value="verifyWorkspaceIsDeleted" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="AddWorkspaceProjects" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.fundacion.automation.workspaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="automation" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="org.fundacion.automation.workspaces" />
+      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.workspaces.AddWorkspaceProjects" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -689,10 +690,10 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="TestCreateProject" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RemoveWorkspaceProjects" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="org.fundacion.automation.projects.*" />
+          <option name="PATTERN" value="org.fundacion.automation.workspaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -700,8 +701,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="org.fundacion.automation.projects" />
-      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.projects.TestCreateProject" />
+      <option name="PACKAGE_NAME" value="org.fundacion.automation.workspaces" />
+      <option name="MAIN_CLASS_NAME" value="org.fundacion.automation.workspaces.RemoveWorkspaceProjects" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -1120,11 +1121,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.TestDeleteProject" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.org.fundacion.automation.projects" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.CreatePrivateProjectTest" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.ModifyProjectTest" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.TestCreateProject" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.TestCreateWorkspace" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.TestDeleteWorkspace" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.TestDeleteWorkspace.verifyWorkspaceIsDeleted" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.AddWorkspaceProjects" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.RemoveWorkspaceProjects" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1187,14 +1188,14 @@
     <history-entry file="ModifyProjectTest - 2016.12.14 at 11h 17m 17s.xml">
       <configuration name="ModifyProjectTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCreateProject - 2016.12.14 at 11h 18m 51s.xml">
-      <configuration name="TestCreateProject" configurationId="TestNG" />
+    <history-entry file="TestDeleteWorkspace - 2016.12.19 at 16h 04m 58s.xml">
+      <configuration name="TestDeleteWorkspace" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestDeleteProject - 2016.12.14 at 10h 56m 46s.xml">
-      <configuration name="TestDeleteProject" configurationId="TestNG" />
+    <history-entry file="TestDeleteWorkspace - 2016.12.19 at 16h 06m 51s.xml">
+      <configuration name="TestDeleteWorkspace" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestDeleteProject - 2016.12.14 at 11h 09m 59s.xml">
-      <configuration name="TestDeleteProject" configurationId="TestNG" />
+    <history-entry file="TestDeleteWorkspace - 2016.12.19 at 16h 09m 46s.xml">
+      <configuration name="TestDeleteWorkspace" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestDeleteProject - 2016.12.19 at 16h 41m 24s.xml">
       <configuration name="TestDeleteProject" configurationId="TestNG" />
@@ -1202,17 +1203,17 @@
     <history-entry file="org_fundacion_automation_projects - 2016.12.14 at 11h 14m 27s.xml">
       <configuration name="org.fundacion.automation.projects" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="org_fundacion_automation_projects - 2016.12.14 at 11h 22m 57s.xml">
-      <configuration name="org.fundacion.automation.projects" configurationId="TestNG" />
+    <history-entry file="TestDeleteWorkspace - 2016.12.19 at 16h 36m 18s.xml">
+      <configuration name="TestDeleteWorkspace" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="org_fundacion_automation_projects - 2016.12.14 at 11h 27m 02s.xml">
-      <configuration name="org.fundacion.automation.projects" configurationId="TestNG" />
+    <history-entry file="TestDeleteWorkspace - 2016.12.19 at 16h 37m 41s.xml">
+      <configuration name="TestDeleteWorkspace" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="org_fundacion_automation_projects - 2016.12.14 at 11h 30m 49s.xml">
-      <configuration name="org.fundacion.automation.projects" configurationId="TestNG" />
+    <history-entry file="TestDeleteWorkspace - 2016.12.19 at 16h 38m 34s.xml">
+      <configuration name="TestDeleteWorkspace" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="org_fundacion_automation_projects - 2016.12.14 at 11h 38m 54s.xml">
-      <configuration name="org.fundacion.automation.projects" configurationId="TestNG" />
+    <history-entry file="TestDeleteWorkspace - 2016.12.19 at 16h 39m 53s.xml">
+      <configuration name="TestDeleteWorkspace" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -1244,7 +1245,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1275,7 +1275,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1293,21 +1293,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.0/selenium-remote-driver-2.53.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
+    <entry file="file://$PROJECT_DIR$/automation/reports/screenShot/12162016 01-18-21.png" />
+    <entry file="file://$PROJECT_DIR$/automation/reports/screenShot/12162016 02-01-44.png" />
+    <entry file="file://$PROJECT_DIR$/automation/reports/extentReport/report.html" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.0.1/extentreports-3.0.1.jar!/com/aventstack/extentreports/ExtentReports.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="334" column="32" lean-forward="false" selection-start-line="334" selection-start-column="32" selection-end-line="334" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/FluentWait.class">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.8/testng-6.8.8.jar!/org/testng/SuiteRunnerWorker.class">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/RuntimePermission.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
@@ -1343,14 +1346,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/reports/extentReport/Readme.txt">
+    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java.bak" />
+    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/projects/CreatePrivateProjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/reports/reportNG/Readme.txt">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/CreateWorkspaceModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1367,49 +1371,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/System.java">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/WorkspaceModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="893" column="42" lean-forward="false" selection-start-line="893" selection-start-column="42" selection-end-line="893" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/RuntimePermission.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/pagefactory/DefaultElementLocator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="367" column="11" lean-forward="false" selection-start-line="367" selection-start-column="11" selection-end-line="367" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/security/BasicPermission.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.8/testng-6.8.8.jar!/org/testng/internal/TestMethodWorker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="129" column="11" lean-forward="false" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/security/Permission.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.8/testng-6.8.8.jar!/org/testng/TestRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1467">
           <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/reports/screenShot/Readme.txt">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.8/testng-6.8.8.jar!/org/testng/TestNG.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/projects/CreatePrivateProjectTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.8/testng-6.8.8.jar!/org/testng/internal/Invoker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/src/resource/testsuites/testngsuite.xml">
+    <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/projects/ProjectsWorkSpacesPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="e#1040#1041#0" expanded="false" />
+            <element signature="e#1106#1107#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/fundacion/model/login/LoginModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1417,7 +1432,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/fundacion/common/listener/ExtentListener.java">
+    <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/home/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
@@ -1430,7 +1445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/fundacion/common/listener/ExtentManager.java">
+    <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/WorkspaceListPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
@@ -1438,7 +1453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/org/fundacion/common/utilities/Screenshot.java">
+    <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/login/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
