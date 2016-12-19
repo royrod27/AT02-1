@@ -15,13 +15,12 @@ import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.AssertJUnit.assertEquals;
 
 /**
- * Created by JorgeForero on 12/15/2016.
+ * Created by JorgeForero on 12/19/2016.
  */
-public class CreateStoryTest extends Base {
+public class CreateDescriptionTest extends Base {
   WebDriver driver;
   HomePage home;
   ProjectMenuPage projectMenuPage;
@@ -43,7 +42,7 @@ public class CreateStoryTest extends Base {
   }
 
   @Test
-  public void testCreateNewStory() {
+  public void testCreateDescription() {
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStory");
     project.clickSelectAccount("Maria");
@@ -55,7 +54,9 @@ public class CreateStoryTest extends Base {
     storyPage.clickOnCreateStory();
     storyPage.clickOnExpandStory();
 
-    assertEquals("TestStory", storyPage.getStoryName());
+    storyPage.setDescriptionTextarea("Description");
+
+    assertEquals("Description", storyPage.getStoryDescription());
   }
 
   @AfterMethod

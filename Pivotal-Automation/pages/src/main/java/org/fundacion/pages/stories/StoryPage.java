@@ -26,6 +26,9 @@ public class StoryPage {
   @FindBy(xpath = StoryModel.editDescriptionButton)
   WebElement editDescriptionButton;
 
+  @FindBy(css = StoryModel.descriptionText)
+  WebElement descriptionText;
+
   @FindBy(name = StoryModel.storyDescriptionTextField)
   WebElement storyDescriptionTextField;
 
@@ -79,6 +82,10 @@ public class StoryPage {
     return storyTitleTextArea.getText();
   }
 
+  public String getStoryDescription() {
+    return descriptionText.getText();
+  }
+
   public void setDescriptionTextarea(String storyDescription) {
     editDescriptionButton.click();
     storyDescriptionTextField.clear();
@@ -104,7 +111,7 @@ public class StoryPage {
     }
   }
 
-  public TaskPage clickCreateTask(WebDriver driver ) {
-       return new TaskPage(driver);
+  public TaskPage clickCreateTask(WebDriver driver) {
+    return new TaskPage(driver);
   }
 }
