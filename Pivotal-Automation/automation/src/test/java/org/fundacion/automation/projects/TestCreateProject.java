@@ -11,10 +11,7 @@ import org.fundacion.pages.projects.ProjectMenuPage;
 import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,8 +20,9 @@ import static org.testng.Assert.assertTrue;
 /**
  * Unit test for simple App.
  */
-public class TestCreateProject {
+public class TestCreateProject extends Base{
   WebDriver driver;
+  HomePage home;
 
   @BeforeTest
   public void setSingletonDriver() {
@@ -41,7 +39,7 @@ public class TestCreateProject {
     login.setUserName("fernando.iquiza@fundacion-jala.org");
     login.clickContinue();
     login.setPassword("MTat676435019");
-    HomePage home = login.clickSubmit();
+    home = login.clickSubmit();
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("ProjectCreated");
     project.clickSelectAccount("Fundacion Jala");
@@ -51,6 +49,11 @@ public class TestCreateProject {
     SettingsPage settingsPage = projectMenu.clickSettings();
     settingsPage.deleteProject();
     //driver.quit();
+  }
+
+  @AfterTest
+  public void logOutProfile(){
+    home.LogOut();
   }
 
 }

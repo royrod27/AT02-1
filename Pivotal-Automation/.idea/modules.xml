@@ -4,12 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Pivotal-Automation.iml" filepath="$PROJECT_DIR$/Pivotal-Automation.iml" />
       <module fileurl="file://$PROJECT_DIR$/automation/automation.iml" filepath="$PROJECT_DIR$/automation/automation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/automation/automation.iml" filepath="$PROJECT_DIR$/automation/automation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
-      <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pages/pages.iml" filepath="$PROJECT_DIR$/pages/pages.iml" />
       <module fileurl="file://$PROJECT_DIR$/pages/pages.iml" filepath="$PROJECT_DIR$/pages/pages.iml" />
     </modules>
   </component>
