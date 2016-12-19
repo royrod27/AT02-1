@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d073476-1ae1-4072-8c38-ffb398097091" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/AddWorkspaceProjects.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/RemoveWorkspaceProjects.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/ManageWorkspaceModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/SettingsWorkspaceModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/ManageWorkspacePage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/SettingsWorkspacePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestCreateWorkspace.java" afterPath="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestCreateWorkspace.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java" afterPath="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/WorkspaceModel.java" afterPath="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/WorkspaceModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/home/HomePage.java" afterPath="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/home/HomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/CreateWorkspacePage.java" afterPath="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/CreateWorkspacePage.java" />
@@ -41,20 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateProjectPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/projects/CreateProjectPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="58" column="93" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ManageWorkspacePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/ManageWorkspacePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="510">
               <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -73,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddWorkspaceProjects.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddWorkspaceProjects.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/AddWorkspaceProjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="544">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -88,7 +71,7 @@
       <file leaf-file-name="RemoveWorkspaceProjects.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/RemoveWorkspaceProjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
+            <state relative-caret-position="510">
               <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -100,7 +83,7 @@
       <file leaf-file-name="CreateWorkspacePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/CreateWorkspacePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="476">
               <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
@@ -110,9 +93,11 @@
       <file leaf-file-name="WorkspacePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/WorkspacePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="986">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <marker date="1482162722302" expanded="true" signature="2167:2185" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,17 +105,17 @@
       <file leaf-file-name="TestCreateWorkspace.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestCreateWorkspace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="425">
               <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestDeleteWorkspace.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestDeleteWorkspace.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-84">
+            <state relative-caret-position="70">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -211,15 +196,15 @@
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/CreateWorkspacePage.java" />
         <option value="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/SettingsWorkspaceModel.java" />
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/SettingsWorkspacePage.java" />
-        <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java" />
         <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestCreateWorkspace.java" />
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/home/HomePage.java" />
         <option value="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/ManageWorkspaceModel.java" />
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/ManageWorkspacePage.java" />
-        <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/AddWorkspaceProjects.java" />
         <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/RemoveWorkspaceProjects.java" />
         <option value="$PROJECT_DIR$/model/src/main/java/org/fundacion/model/workspaces/WorkspaceModel.java" />
         <option value="$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/WorkspacePage.java" />
+        <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/AddWorkspaceProjects.java" />
+        <option value="$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java" />
       </list>
     </option>
   </component>
@@ -272,8 +257,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -546,7 +530,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1227,6 +1212,8 @@
       <workItem from="1481859972623" duration="15584000" />
       <workItem from="1481894369294" duration="290000" />
       <workItem from="1481895659847" duration="13913000" />
+      <workItem from="1482162053135" duration="30000" />
+      <workItem from="1482162747935" duration="39000" />
     </task>
     <servers />
   </component>
@@ -1263,16 +1250,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77166000" />
+    <option name="totallyTimeSpent" value="77235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1284,13 +1270,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987887" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31996974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31996974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41898528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41898528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1300,6 +1286,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1331,13 +1318,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/pagefactory/DefaultElementLocator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.0/selenium-remote-driver-2.53.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -1463,9 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1481,7 +1458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1489,7 +1465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,7 +1498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1539,7 +1513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,7 +1520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,7 +1527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1563,13 +1534,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/projects/CreateProjectPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="833">
           <caret line="58" column="93" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="93" />
           <folding />
         </state>
@@ -1585,7 +1555,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/CreateWorkspacePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="476">
           <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
           <folding />
         </state>
@@ -1593,7 +1563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/ManageWorkspacePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="510">
           <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1611,24 +1581,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/src/main/java/org/fundacion/pages/workspaces/WorkspacePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="986">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <marker date="1482162722302" expanded="true" signature="2167:2185" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestCreateWorkspace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="425">
           <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java">
+    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/AddWorkspaceProjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="544">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1637,7 +1609,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/RemoveWorkspaceProjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
+        <state relative-caret-position="510">
           <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1645,13 +1617,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/AddWorkspaceProjects.java">
+    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="70">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/src/test/java/org/fundacion/automation/workspaces/TestDeleteWorkspace.java.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

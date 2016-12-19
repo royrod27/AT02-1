@@ -27,13 +27,17 @@ public class TestDeleteWorkspace {
     login.setPassword("AT02david");
     HomePage home = login.clickSubmit();
 
-
+    home.clickWorkspaceTab();
     CreateWorkspacePage workspace = home.clickCreateWorkspaceLink();
     workspace.setWorkspaceName("TestToDelete");
     WorkspacePage workspacePage = workspace.clickCreateWorkspace();
-    SettingsWorkspacePage settingsWorkspace = workspacePage.settingsWorkspace();
-    settingsWorkspace.deleteWorkspace();
-    settingsWorkspace.confirmDeleteWorkspace();
+
+    workspacePage.goToHome();
+    home.clickWorkspaceTab();
+
+//    SettingsWorkspacePage settingsWorkspace = workspacePage.settingsWorkspace();
+//    settingsWorkspace.deleteWorkspace();
+//    settingsWorkspace.confirmDeleteWorkspace();
 
   }
 }
