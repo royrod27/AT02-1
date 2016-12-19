@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * Created by Administrator on 12/13/2016.
  */
 public class SettingsPage {
+
   WebDriver driver;
   WebDriverWait wait;
 
