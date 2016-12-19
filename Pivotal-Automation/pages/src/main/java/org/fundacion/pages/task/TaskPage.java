@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * Created by Administrator on 12/19/2016.
+ * Created by Angelica Rodriguez on 12/19/2016.
  */
 public class TaskPage {
 
