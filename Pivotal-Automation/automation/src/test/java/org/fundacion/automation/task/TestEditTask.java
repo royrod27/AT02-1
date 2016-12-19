@@ -18,9 +18,9 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Created by Administrator on 12/19/2016.
+ * Created by Angelica Rodriguez on 12/19/2016.
  */
-public class TestCreateTask extends Base {
+public class TestEditTask extends Base {
     WebDriver driver;
     HomePage home;
     ProjectMenuPage projectMenuPage;
@@ -28,7 +28,7 @@ public class TestCreateTask extends Base {
     SettingsPage settingsPage;
 
     @Test
-    public void testCreateTask() {
+    public void testEditTask() {
 
         driver = Driver.getDriver().openBrowser();
         driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
@@ -54,11 +54,13 @@ public class TestCreateTask extends Base {
         userStoryPage.addTask("new task5");
         userStoryPage.addTask("new task6");
         userStoryPage.addTask("new task7");
+        userStoryPage.editTask("new task4");
+        userStoryPage.inputNewName("new task8");
         storyPage.clickOnCreateStory();
         storyPage.clickOnExpandStory();
-        assertTrue(userStoryPage.contentNameTask("new task7"));
+        assertTrue(userStoryPage.contentNameTask("new task8"));
+        
     }
-
     @AfterMethod
     public void clean(){
         storyPage.clickDeleteStory();
@@ -70,4 +72,5 @@ public class TestCreateTask extends Base {
     public void logOutProfile() {
         home.LogOut();
     }
+
 }
