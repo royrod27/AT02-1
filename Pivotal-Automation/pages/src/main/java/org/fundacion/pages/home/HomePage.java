@@ -4,6 +4,7 @@ import org.fundacion.model.home.HomeModel;
 import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.projects.ProjectsWorkSpacesPage;
 import org.fundacion.pages.workspaces.CreateWorkspacePage;
+import org.fundacion.pages.workspaces.WorkspaceListPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,19 +26,19 @@ public class HomePage {
   @FindBy(xpath = HomeModel.pivotalBtn)
   private WebElement pivotalBtn;
 
-<<<<<<< HEAD
+
   @FindBy(css = HomeModel.workspaceTab)
   WebElement workspaceTab;
 
   @FindBy(css = HomeModel.createWorkspaceButton)
   WebElement createWorkspace;
-=======
+
   @FindBy(xpath = "//div/header/ul/li[3]/div")
   WebElement logOutBtn;
 
   @FindBy(xpath = "//div/div/ul/li[4]/form/button")
   WebElement signOutBtn;
->>>>>>> dev
+
 
   public HomePage(WebDriver driver) {
     this.driver = driver;
@@ -59,8 +60,9 @@ public class HomePage {
     return new ProjectsWorkSpacesPage(driver);
   }
 
-  public void clickWorkspaceTab() {
+  public WorkspaceListPage clickWorkspaceTab() {
     workspaceTab.click();
+    return new WorkspaceListPage(driver);
   }
   
   public CreateWorkspacePage clickCreateWorkspaceLink() {

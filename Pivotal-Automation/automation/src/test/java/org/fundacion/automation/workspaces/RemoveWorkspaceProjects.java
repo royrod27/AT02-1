@@ -26,7 +26,7 @@ public class RemoveWorkspaceProjects {
     login.setPassword("AT02david");
     HomePage home = login.clickSubmit();
 
-
+    home.clickWorkspaceTab();
     CreateWorkspacePage workspace = home.clickCreateWorkspaceLink();
     workspace.setWorkspaceName("RemoveTest");
     WorkspacePage workspacePage = workspace.clickCreateWorkspace();

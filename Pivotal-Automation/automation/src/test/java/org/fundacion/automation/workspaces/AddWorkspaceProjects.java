@@ -26,12 +26,13 @@ public class AddWorkspaceProjects {
     login.setPassword("AT02david");
     HomePage home = login.clickSubmit();
 
-
+    home.clickWorkspaceTab();
     CreateWorkspacePage workspace = home.clickCreateWorkspaceLink();
     workspace.setWorkspaceName("TestToAddProject");
     WorkspacePage workspacePage = workspace.clickCreateWorkspace();
 
     ManageWorkspacePage manageWorkspace = workspacePage.addProjectOption();
     manageWorkspace.addWorkspaceProject("Test");
+    
   }
 }
