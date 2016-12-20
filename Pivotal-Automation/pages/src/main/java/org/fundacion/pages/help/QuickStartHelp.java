@@ -1,13 +1,13 @@
-package org.fundacion.pages.projects;
+package org.fundacion.pages.help;
 
-import org.fundacion.model.projects.QuickStartModel;
+import org.fundacion.model.help.QuickStartModel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- * Created by Administrator on 12/19/2016.
+ * Created by Fernando on 12/19/2016.
  */
 public class QuickStartHelp {
   WebDriver driver;
