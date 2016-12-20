@@ -15,7 +15,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by Administrator on 12/19/2016.
@@ -56,7 +56,7 @@ public class TestCreateTask extends Base {
         userStoryPage.addTask("new task7");
         storyPage.clickOnCreateStory();
         storyPage.clickOnExpandStory();
-        assertTrue(userStoryPage.contentNameTask("new task7"));
+        assertEquals(1,userStoryPage.sizeContentNameTask("new task7"));
     }
 
     @AfterMethod

@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 /**
  * Created by Angelica Rodriguez on 12/19/2016.
  */
@@ -101,13 +103,15 @@ public class TaskPage {
         buttonOk.click();
     }
 
+    public int sizeContentNameTask(String name) {
+        Integer count = 0;
+        List<WebElement> elementTabla = driver.findElements(By.xpath("//section[5]/div/div/div[1]/div"));
+        for (WebElement elementFind:elementTabla) {
 
-    public int sizeContentNameTask(String nameAccount) {
-        return   listTask.getText().length();
-    }
-
-    public String countTask(){
-        return countTask.getText();
+            if (elementFind.getText().equals(name))
+                count++;
+        }
+        return count;
     }
 
 }

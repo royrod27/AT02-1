@@ -55,7 +55,7 @@ public class TestCreateMultipleTaskWithTheSameName {
         userStoryPage.addTask("new task3");
         storyPage.clickOnCreateStory();
         storyPage.clickOnExpandStory();
-        assertEquals("TASKS (0/5)",userStoryPage.countTask());
+        assertEquals(5,userStoryPage.sizeContentNameTask("new task3"));
     }
 
     @AfterMethod
