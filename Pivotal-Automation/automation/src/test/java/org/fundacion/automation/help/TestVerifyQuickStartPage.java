@@ -1,17 +1,18 @@
-package org.fundacion.automation.projects;
+package org.fundacion.automation.help;
 
+import org.fundacion.automation.projects.Base;
 import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
-import org.fundacion.pages.projects.HelpPageMain;
-import org.fundacion.pages.projects.QuickStartHelp;
+import org.fundacion.pages.help.HelpPageMain;
+import org.fundacion.pages.help.QuickStartHelp;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 /**
- * Created by Administrator on 12/19/2016.
+ * Created by Fernando on 12/19/2016.
  */
 
 public class TestVerifyQuickStartPage extends Base {

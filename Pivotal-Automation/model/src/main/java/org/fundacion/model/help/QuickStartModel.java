@@ -1,7 +1,7 @@
-package org.fundacion.model.projects;
+package org.fundacion.model.help;
 
 /**
- * Created by Administrator on 12/20/2016.
+ * Created by Fernando on 12/20/2016.
  */
 public class QuickStartModel {
   public static final String quickStartTitle = "//h1[text()='Quick start']";

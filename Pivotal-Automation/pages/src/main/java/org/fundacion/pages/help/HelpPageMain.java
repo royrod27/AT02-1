@@ -1,6 +1,7 @@
-package org.fundacion.pages.projects;
+package org.fundacion.pages.help;
 
-import org.fundacion.model.projects.HelpMainModel;
+import org.fundacion.model.help.HelpMainModel;
+import org.fundacion.pages.help.QuickStartHelp;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +15,7 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 /**
- * Created by Administrator on 12/19/2016.
+ * Created by Fernando on 12/19/2016.
  */
 public class HelpPageMain {
   private WebDriver driver;

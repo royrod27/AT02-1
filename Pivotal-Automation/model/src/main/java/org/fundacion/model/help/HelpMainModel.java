@@ -1,10 +1,10 @@
-package org.fundacion.model.projects;
+package org.fundacion.model.help;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Created by Administrator on 12/20/2016.
+ * Created by Fernando on 12/20/2016.
  */
 public class HelpMainModel {
   public static final String getStartedBtn = "//div[2]/div[3]/div[2]/div[1]/a";
