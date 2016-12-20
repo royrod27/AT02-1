@@ -1,9 +1,10 @@
 package org.fundacion.common.drivers;
 
+import java.util.concurrent.TimeUnit;
+import org.fundacion.common.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
@@ -17,12 +18,12 @@ public class Driver {
   /**
    * This method is to open a browser.
    * It is possible implement more browsers.
+   *
    * @return the driver of that browser was initialize.
    */
   public WebDriver openBrowser() {
     if (chrome == null) {
-      System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
-      driver = new ChromeDriver();
+      driver = new WebDriverFactory("iexplorerm").getDriver();
       driver.manage().timeouts().implicitlyWait(14, TimeUnit.SECONDS);
       driver.manage().window().maximize();
       driver.get("https://www.pivotaltracker.com/signin");
@@ -36,6 +37,7 @@ public class Driver {
   /**
    * Method to obtain the instance of the
    * singleton driver.
+   *
    * @return the instance.
    */
   public static Driver getDriver() {
