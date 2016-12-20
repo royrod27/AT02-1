@@ -1,6 +1,7 @@
 package org.fundacion.pages.stories;
 
 import org.fundacion.model.story.StoryModel;
+import org.fundacion.pages.task.TaskPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,9 @@ public class StoryPage {
 
   @FindBy(xpath = StoryModel.editDescriptionButton)
   WebElement editDescriptionButton;
+
+  @FindBy(css = StoryModel.descriptionText)
+  WebElement descriptionText;
 
   @FindBy(name = StoryModel.storyDescriptionTextField)
   WebElement storyDescriptionTextField;
@@ -78,6 +82,10 @@ public class StoryPage {
     return storyTitleTextArea.getText();
   }
 
+  public String getStoryDescription() {
+    return descriptionText.getText();
+  }
+
   public void setDescriptionTextarea(String storyDescription) {
     editDescriptionButton.click();
     storyDescriptionTextField.clear();
@@ -101,5 +109,9 @@ public class StoryPage {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+  }
+
+  public TaskPage clickCreateTask(WebDriver driver) {
+    return new TaskPage(driver);
   }
 }
