@@ -32,7 +32,7 @@ public class WorkspaceListPage {
   @FindBy(xpath = WorkspaceListModel.workspaces)
   List<WebElement> workspaces;
 
-  public void deleteWorkspace(String name) {
+  public void findWorkspaceOnList(String name) {
     elementDeleted = driver.findElement(By.xpath("//a[text() = '" + name + "']")).getAttribute("href");
     driver.findElement(By.xpath("//a[text() = '" + name + "']")).click();
   }

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Driver {
 
   private static Driver instance;
-  private static WebDriver driver;
+  public static WebDriver driver;
   private WebDriver chrome;
 
   private Driver() {
