@@ -24,5 +24,8 @@ public class TaskModel {
     public static final String nameEdit = "//section/textarea";
 
     public static final String saveEdit = "(//button[@type='submit'])[3]";
+
     public static final String buttonOk = "//div/div[2]/div/div[3]/button";
+
+    public static final String countTask = "//section[5]/div/div/span/h4";
 }

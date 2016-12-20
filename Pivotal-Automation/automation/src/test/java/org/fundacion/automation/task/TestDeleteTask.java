@@ -14,12 +14,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertTrue;
+import static org.testng.Assert.assertFalse;
 
 /**
  * Created by Angelica Rodriguez on 12/19/2016.
  */
-public class TestCreateTaskWithoutName {
+public class TestDeleteTask {
+
     WebDriver driver;
     HomePage home;
     ProjectMenuPage projectMenuPage;
@@ -27,7 +28,7 @@ public class TestCreateTaskWithoutName {
     SettingsPage settingsPage;
 
     @Test
-    public void testCreateTaskWithoutName() {
+    public void testDeleteTask() {
 
         driver = Driver.getDriver().openBrowser();
         driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
@@ -48,12 +49,15 @@ public class TestCreateTaskWithoutName {
         storyPage.setTitleStory("TestStory");
 
         TaskPage userStoryPage = storyPage.clickCreateTask(driver);
-        userStoryPage.addTask("");
-        assertTrue(userStoryPage.alertDialog().contains("Cannot Save Task"));
-        userStoryPage.clickButtonOk();
+        userStoryPage.addTask("new task3");
+        userStoryPage.addTask("new task4");
+        userStoryPage.addTask("new task5");
+        userStoryPage.addTask("new task6");
+        userStoryPage.addTask("new task7");
+        userStoryPage.deleteTask("new task4");
         storyPage.clickOnCreateStory();
         storyPage.clickOnExpandStory();
-
+        assertFalse(userStoryPage.contentNameTask("new task4"));
     }
 
     @AfterMethod
@@ -67,6 +71,4 @@ public class TestCreateTaskWithoutName {
     public void logOutProfile() {
         home.LogOut();
     }
-
 }
-
