@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 /**
- * Created by Administrator on 12/19/2016.
+ * Created by Angelica Rodriguez on 12/19/2016.
  */
 public class TestCreateMultipleTaskWithTheSameName {
     WebDriver driver;
