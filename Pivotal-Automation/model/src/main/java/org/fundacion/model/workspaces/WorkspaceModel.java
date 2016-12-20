@@ -9,4 +9,5 @@ public class WorkspaceModel {
   public static final String addRemoveButton = "workspace_settings"; //by id
   public static final String addRemoveOption = "//ul/li[1]/a";
   public static final String homeLink = "li:nth-child(1) > a";
+  public static final String projectsList = "a > span.full";
 }

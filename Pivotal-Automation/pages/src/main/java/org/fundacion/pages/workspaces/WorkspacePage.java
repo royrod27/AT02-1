@@ -42,9 +42,11 @@ public class WorkspacePage {
   @FindBy(css = WorkspaceModel.homeLink)
   WebElement homeLink;
 
+  @FindBy(css = WorkspaceModel.projectsList)
+  List<WebElement> projectsList;
+
+
   public boolean workspaceTitle(String title) {
-//    String expect = this.title.getText();
-//    String actual = title;
     wait.until(ExpectedConditions.elementToBeClickable(setting));
     return this.title.getText().equals(title);
   }
@@ -72,5 +74,25 @@ public class WorkspacePage {
     wait.until(ExpectedConditions.elementToBeClickable(title));
     homeLink.click();
     return new HomePage(driver);
+  }
+
+  public Boolean verifyProjectCreated(String name) {
+    Boolean flag = false;
+    for (WebElement element: projectsList) {
+      if(element.getText().equals(name.toUpperCase())){
+        flag = true;
+      }
+    }
+    return flag;
+  }
+
+  public Boolean verifyProjectWasDeleted(String name) {
+    Boolean flag = false;
+    for (WebElement element: projectsList) {
+      if(element.getText().equals(name.toUpperCase())){
+        flag = true;
+      }
+    }
+    return flag;
   }
 }

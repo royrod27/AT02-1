@@ -9,6 +9,8 @@ import org.fundacion.pages.workspaces.WorkspacePage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by David on 12/16/2016.
  */
@@ -33,6 +35,7 @@ public class AddWorkspaceProjects {
 
     ManageWorkspacePage manageWorkspace = workspacePage.addProjectOption();
     manageWorkspace.addWorkspaceProject("Test");
-    
+
+    assertTrue(workspacePage.verifyProjectCreated("Test"));
   }
 }
