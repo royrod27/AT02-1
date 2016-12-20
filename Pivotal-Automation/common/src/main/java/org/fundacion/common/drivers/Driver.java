@@ -23,7 +23,7 @@ public class Driver {
    */
   public WebDriver openBrowser() {
     if (chrome == null) {
-      driver = new WebDriverFactory("iexplorerm").getDriver();
+      driver = new WebDriverFactory("chrome").getDriver();
       driver.manage().timeouts().implicitlyWait(14, TimeUnit.SECONDS);
       driver.manage().window().maximize();
       driver.get("https://www.pivotaltracker.com/signin");
