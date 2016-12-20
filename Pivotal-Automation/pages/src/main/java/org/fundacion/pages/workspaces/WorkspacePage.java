@@ -32,7 +32,6 @@ public class WorkspacePage {
   @FindBy(css = WorkspaceModel.settingLink)
   WebElement setting;
 
-
   @FindBy(id = WorkspaceModel.addRemoveButton)
   WebElement addRemoveButton;
 

@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
   private static Driver instance;
-  private static WebDriver driver;
+  public static WebDriver driver;
   private WebDriver chrome;
 
   private Driver() {

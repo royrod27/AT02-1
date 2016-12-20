@@ -1,47 +1,67 @@
 package org.fundacion.automation.workspaces;
 
+import static org.testng.Assert.assertFalse;
+
+import org.fundacion.automation.projects.Base;
 import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
-import org.fundacion.pages.workspaces.*;
-import org.openqa.selenium.WebDriver;
+import org.fundacion.pages.workspaces.CreateWorkspacePage;
+import org.fundacion.pages.workspaces.ManageWorkspacePage;
+import org.fundacion.pages.workspaces.SettingsWorkspacePage;
+import org.fundacion.pages.workspaces.WorkspaceListPage;
+import org.fundacion.pages.workspaces.WorkspacePage;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertFalse;
 
 /**
  * Created by David on 12/19/2016.
  */
-public class DeleteWorkspaceWithProject {
-  WebDriver driver;
+public class DeleteWorkspaceWithProject extends Base {
+  HomePage home;
+  CreateWorkspacePage createWorkspacePage;
+  WorkspacePage workspacePage;
+  ManageWorkspacePage manageWorkspace;
+  SettingsWorkspacePage settingsWorkspace;
+  WorkspaceListPage listWorkspaces;
 
-  @Test
-  public void verifyWorkspaceIsDeletedWithProject() {
-
-    System.setProperty("webdriver.chrome.driver", "..\\chromedriver.exe");
+  /**
+   * Login.
+   */
+  @BeforeMethod
+  public void login() {
     driver = Driver.getDriver().openBrowser();
-    driver.get("https://www.pivotaltracker.com/signin");
+    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
     LoginPage login = new LoginPage(driver);
     login.setUserName("Ariel.Vallejos@fundacion-jala.org");
     login.clickContinue();
     login.setPassword("AT02david");
-    HomePage home = login.clickSubmit();
+    home = login.clickSubmit();
+  }
 
+  @Test
+  public void verifyWorkspaceIsDeletedWithProject() {
     home.clickWorkspaceTab();
-    CreateWorkspacePage workspace = home.clickCreateWorkspaceLink();
-    workspace.setWorkspaceName("WorkspaceWithProject");
-    WorkspacePage workspacePage = workspace.clickCreateWorkspace();
+    createWorkspacePage = home.clickCreateWorkspaceLink();
+    createWorkspacePage.setWorkspaceName("WorkspaceWithProject");
+    workspacePage = createWorkspacePage.clickCreateWorkspace();
 
-    ManageWorkspacePage manageWorkspace = workspacePage.addProjectOption();
+    manageWorkspace = workspacePage.addProjectOption();
     manageWorkspace.addWorkspaceProject("Test");
 
-
-    SettingsWorkspacePage settingsWorkspace = workspacePage.settingsWorkspace();
+    settingsWorkspace = workspacePage.settingsWorkspace();
     settingsWorkspace.deleteWorkspace();
     settingsWorkspace.confirmDeleteWorkspace();
 
-    WorkspaceListPage listWorkspaces = home.clickWorkspaceTab();
+    listWorkspaces = home.clickWorkspaceTab();
 
     assertFalse(listWorkspaces.verifyProjectWasDeleted());
+  }
+
+  @AfterMethod
+  public void clean() {
+    home.LogOut();
   }
 }

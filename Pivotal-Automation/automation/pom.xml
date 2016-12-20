@@ -52,7 +52,8 @@
                         </property>
                     </properties>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/resource/testsuites/testngsuite.xml</suiteXmlFile>
+                        <!--<suiteXmlFile>src/resource/testsuites/testngsuite.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/resource/testsuites/workspaceSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
