@@ -54,6 +54,7 @@
                     <suiteXmlFiles>
                         <!--<suiteXmlFile>src/resource/testsuites/testngsuite.xml</suiteXmlFile>-->
                         <suiteXmlFile>src/resource/testsuites/workspaceSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/resource/testsuites/taskSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

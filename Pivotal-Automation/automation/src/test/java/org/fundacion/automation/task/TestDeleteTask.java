@@ -14,7 +14,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Created by Angelica Rodriguez on 12/19/2016.
@@ -57,7 +57,7 @@ public class TestDeleteTask {
         userStoryPage.deleteTask("new task4");
         storyPage.clickOnCreateStory();
         storyPage.clickOnExpandStory();
-        assertFalse(userStoryPage.contentNameTask("new task4"));
+        assertEquals(0,userStoryPage.sizeContentNameTask("new task4"));
     }
 
     @AfterMethod
