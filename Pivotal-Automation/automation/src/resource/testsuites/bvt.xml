@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="BVT" parallel="instances" thread-count="5">
+    <suite-files>
+        <suite-file path="./projectsSuite.xml"></suite-file>
+        <suite-file path="./storySuite.xml"></suite-file>
+        <suite-file path="./taskSuite.xml"></suite-file>
+        <suite-file path="./workspaceSuite.xml"></suite-file>
+    </suite-files>
+</suite>
