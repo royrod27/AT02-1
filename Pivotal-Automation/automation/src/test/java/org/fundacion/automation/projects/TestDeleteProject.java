@@ -1,5 +1,5 @@
 package org.fundacion.automation.projects;
-
+import org.fundacion.automation.ABase;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.projects.CreateProjectPage;
@@ -9,12 +9,13 @@ import org.fundacion.pages.projects.SettingsPage;
 import org.testng.annotations.*;
 
 import static org.testng.Assert.assertFalse;
-
-public class TestDeleteProject extends Base {
+/**
+ * Created by SergioLanda on 12/20/2016.
+ */
+public class TestDeleteProject extends ABase {
     ProjectMenuPage projectMenu;
     String nameOfProject = "test01";
     HomePage homePage;
-
 
     @BeforeMethod
     public void testCreateProject() {
