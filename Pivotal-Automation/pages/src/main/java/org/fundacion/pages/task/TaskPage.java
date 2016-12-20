@@ -49,6 +49,10 @@ public class TaskPage {
     @FindBy(xpath = TaskModel.buttonOk)
     WebElement buttonOk;
 
+    @FindBy(xpath = TaskModel.countTask)
+    WebElement countTask;
+
+
 
     public TaskPage(WebDriver driver) {
         this.driver = driver;
@@ -91,11 +95,19 @@ public class TaskPage {
         return listTask.getText().contains(nameAccount) ? true : false;
     }
 
+
+
     public void clickButtonOk() {
         buttonOk.click();
     }
 
+
     public int sizeContentNameTask(String nameAccount) {
         return   listTask.getText().length();
     }
+
+    public String countTask(){
+        return countTask.getText();
+    }
+
 }
