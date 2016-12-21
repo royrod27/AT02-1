@@ -31,10 +31,4 @@ public class TestCreateAccount extends Base {
     assertTrue(settingProject.contentNameAccount(nameAccount), "Error the name of the account is diferent.");
     settingProject.deleteProject();
   }
-
-  @AfterTest
-  public void logOutProfile() {
-    home.LogOut();
-  }
-
 }

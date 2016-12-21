@@ -82,4 +82,9 @@ public class HomePage {
     return new CreateWorkspacePage(driver);
   }
 
+  public LearnMorePage clickLearnMoreButton(){
+    helpLink.click();
+    return new LearnMorePage(driver);
+  }
+
 }

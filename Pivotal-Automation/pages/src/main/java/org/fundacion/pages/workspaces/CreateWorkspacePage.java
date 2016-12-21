@@ -5,15 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by David on 12/15/2016.
- */
 public class CreateWorkspacePage {
   WebDriver driver;
   WebDriverWait wait;
 
+  /**
+   * CreteWorkspacePage class constructor.
+   * @param driver initialize & instance.
+   */
   public CreateWorkspacePage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
@@ -33,7 +35,13 @@ public class CreateWorkspacePage {
     workspaceName.sendKeys(name);
   }
 
+  /**
+   * In this method it wait for a element that is clickable
+   * then make a click to create a new workspace.
+   * @return WorkspacePage class with this driver.
+   */
   public WorkspacePage clickCreateWorkspace() {
+    wait.until(ExpectedConditions.elementToBeClickable(createWorkspaceButton));
     createWorkspaceButton.click();
     return new WorkspacePage(driver);
   }
