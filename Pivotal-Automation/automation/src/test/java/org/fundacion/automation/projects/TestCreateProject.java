@@ -10,10 +10,7 @@ import org.fundacion.pages.projects.ProjectMenuPage;
 
 import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
@@ -53,7 +50,7 @@ public class TestCreateProject extends Base{
 
   @AfterMethod
   public void logOutProfile(){
-    home.LogOut();
+    home.logOut();
   }
 
 }

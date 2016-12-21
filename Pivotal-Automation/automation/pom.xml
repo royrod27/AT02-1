@@ -58,7 +58,6 @@
                     </properties>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/resource/testsuites/${suite}.xml</suiteXmlFile>
-                        <!--<suiteXmlFile>src/resource/testsuites/helpSuite.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

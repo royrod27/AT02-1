@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by Fernando on 12/19/2016.
  */
+
 public class QuickStartHelp {
   WebDriver driver;
 
@@ -20,7 +21,7 @@ public class QuickStartHelp {
   @FindBy(xpath = QuickStartModel.quickStartTitle)
   WebElement quickStartTitle;
 
-  public boolean verifyTitle(){
+  public boolean verifyTitle() {
     return quickStartTitle.getText().equals(driver.getTitle());
   }
 }
