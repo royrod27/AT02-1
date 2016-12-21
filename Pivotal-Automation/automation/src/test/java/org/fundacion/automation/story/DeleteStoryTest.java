@@ -40,7 +40,7 @@ public class DeleteStoryTest extends Base {
     log.info("DeleteStoryTest" , "Verify that is possible delete a story of a project.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestDeleteStory");
-    project.clickSelectAccount("Maria");
+    project.clickSelectAccount("Jala");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();

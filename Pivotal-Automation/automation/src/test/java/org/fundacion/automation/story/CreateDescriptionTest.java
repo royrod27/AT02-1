@@ -39,7 +39,7 @@ public class CreateDescriptionTest extends Base {
     log.info("CreateDescriptionTest", "Verify that is possible add a description on the story.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestCreateStoryDescription");
-    project.clickSelectAccount("Maria");
+    project.clickSelectAccount("Jala");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();

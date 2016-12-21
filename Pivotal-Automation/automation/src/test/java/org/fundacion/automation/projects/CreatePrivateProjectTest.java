@@ -15,23 +15,22 @@ import static org.testng.Assert.assertTrue;
  * Created by Administrator on 12/13/2016.
  */
 public class CreatePrivateProjectTest extends Base {
-  WebDriver driver;
-  HomePage home;
 
-  @Test(priority = 2)
+  @Test
   public void createPrivateProject() {
+    log.info("CreatePrivateProjectTest", "Verify that is possible add a private project.");
 
-    driver = Driver.getDriver().openBrowser();
-    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
+    driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
-    login.setUserName("Roy.Rodriguez@fundacion-jala.org");
+    login.setUserName(configurationObj.getProperty("userName"));
     login.clickContinue();
-    login.setPassword("Sabbath27");
+    login.setPassword(configurationObj.getProperty("userPassword"));
+
     home = login.clickSubmit();
     CreateProjectPage project = home.clickCreateProject();
     String nameOfProject = "projectTestTwo";
     project.setProjectName(nameOfProject);
-    project.clickSelectAccount("Price");
+    project.clickSelectAccount("Jala");
     project.selectPrivacy("private");
     ProjectMenuPage projectMenuPage = project.clickCreate();
     SettingsPage settingsPage = projectMenuPage.clickSettings();
@@ -39,12 +38,8 @@ public class CreatePrivateProjectTest extends Base {
     boolean isPrivate = settingsPage.verifyPrivateAccess();
 
     assertTrue(isPrivate, "project is not private");
+    log.info("CreatePrivateProjectTest", "Expect result: The project was created is private.");
     settingsPage.deleteProject();
-  }
-
-  @AfterMethod
-  public void logOutProfile(){
-    home.logOut();
   }
 
 }

@@ -39,7 +39,7 @@ public class UpdateStoryEstimateTest extends Base {
     log.info("UpdateStoryEstimateTest", "Verify that is possible update estimate point in a Story.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestUpdateEstimatePoint");
-    project.clickSelectAccount("Maria");
+    project.clickSelectAccount("Jala");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();

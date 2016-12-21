@@ -19,39 +19,29 @@ import org.testng.annotations.Test;
 public class TestDeleteProject extends Base {
   ProjectMenuPage projectMenu;
   String nameOfProject = "test01";
-  HomePage homePage;
   String title = "Test Delete Project";
   String testClass = "TestDeleteProject";
 
-  /**
-   * Delete one project created.
-   */
-  @BeforeMethod
-  public void testCreateProject() {
-    LoginPage login = new LoginPage(driver);
-    login.setUserName("sergio.landa@fundacion-jala.org");
-    login.clickContinue();
-    login.setPassword("P@ssw0rd");
-    HomePage home = login.clickSubmit();
-    CreateProjectPage project = home.clickCreateProject();
-    project.setProjectName(nameOfProject);
-    project.clickSelectAccount("Fundacion Jala");
-    projectMenu = project.clickCreate();
-  }
-
   @Test
   public void testDeleteProject() {
+    log.info("TestDeleteProject", "Verify that is possible delete a project.");
+    driver.get(configurationObj.getProperty("url"));
+    LoginPage login = new LoginPage(driver);
+    login.setUserName(configurationObj.getProperty("userName"));
+    login.clickContinue();
+    login.setPassword(configurationObj.getProperty("userPassword"));
+    home = login.clickSubmit();
+    CreateProjectPage project = home.clickCreateProject();
+    project.setProjectName(nameOfProject);
+    project.clickSelectAccount("Jala");
+    projectMenu = project.clickCreate();
     log.info(testClass, title);
     SettingsPage settingsPage = projectMenu.clickSettings();
-    homePage = settingsPage.deleteProject();
-    ProjectsWorkSpacesPage projectsWorkSpacesPage = homePage.clickProjectsAndWorkSpaces();
+    home = settingsPage.deleteProject();
+    ProjectsWorkSpacesPage projectsWorkSpacesPage = home.clickProjectsAndWorkSpaces();
     projectsWorkSpacesPage.clickLinkShowProjects(nameOfProject);
     assertFalse(projectsWorkSpacesPage.existProject());
-    log.info(testClass, "Verify that the project does not exist");
+    log.info(testClass, "Expect result: the project was created does not exist");
   }
 
-  @AfterTest
-  public void logOutProfile() {
-    homePage.logOut();
-  }
 }

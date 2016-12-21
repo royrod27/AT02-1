@@ -39,7 +39,7 @@ public class TestEditTask extends Base {
     log.info(testClass, title);
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStoryWithTask");
-    project.clickNewAccount("Task");
+    project.clickSelectAccount("Jala");
 
     projectMenuPage = project.clickCreate();
 
