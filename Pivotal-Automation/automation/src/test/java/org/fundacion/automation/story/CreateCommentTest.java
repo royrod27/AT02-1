@@ -21,6 +21,9 @@ public class CreateCommentTest extends Base {
   SettingsPage settingsPage;
   StoryPage storyPage;
 
+  /**
+   * Login.
+   */
   @BeforeMethod
   public void logIn() {
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
@@ -33,6 +36,7 @@ public class CreateCommentTest extends Base {
 
   @Test
   public void testCreateNewComment() {
+    log.info("CreateCommentTest", "Verify that is possible add a comment on the story.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStoryComment");
     project.clickSelectAccount("Maria");
@@ -47,8 +51,12 @@ public class CreateCommentTest extends Base {
     storyPage.setComment("Comment Test");
 
     assertTrue("Comment Test", storyPage.verifyExistCommentStory("Comment Test"));
+    log.info("CreateCommentTest", "Expect result: Comment test was add on the story.");
   }
 
+  /**
+   * Delete project & logout.
+   */
   @AfterMethod
   public void clean() {
     settingsPage = projectMenuPage.clickSettings();

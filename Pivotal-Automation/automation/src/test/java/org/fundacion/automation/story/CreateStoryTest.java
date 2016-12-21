@@ -24,6 +24,9 @@ public class CreateStoryTest extends Base {
   SettingsPage settingsPage;
   StoryPage storyPage;
 
+  /**
+   * Login.
+   */
   @BeforeMethod
   public void logIn() {
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
@@ -36,6 +39,7 @@ public class CreateStoryTest extends Base {
 
   @Test
   public void testCreateNewStory() {
+    log.info("CreateStoryTest", "Verify that is possible create a Story on the project.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStory");
     project.clickSelectAccount("Maria");
@@ -48,8 +52,12 @@ public class CreateStoryTest extends Base {
     storyPage.clickOnExpandStory();
 
     assertEquals("TestStory", storyPage.getStoryName());
+    log.info("CreateStoryTest", "Expect result: Story test was add on the project.");
   }
 
+  /**
+   * Delete project, story & logout.
+   */
   @AfterMethod
   public void clean() {
     storyPage.clickDeleteStory();
