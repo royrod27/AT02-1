@@ -7,6 +7,8 @@
     <test name="HelpTestClasses">
         <classes>
             <class name="org.fundacion.automation.help.TestVerifyQuickStartPage"/>
+            <class name="org.fundacion.automation.help.TestLearnMore"/>
+            <!--<class name="org.fundacion.automation.help.TestApiDocumentation"/>-->
         </classes>
     </test>
 </suite>

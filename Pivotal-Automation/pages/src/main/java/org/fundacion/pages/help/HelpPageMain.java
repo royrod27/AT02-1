@@ -1,12 +1,9 @@
 package org.fundacion.pages.help;
 
 import org.fundacion.model.help.HelpMainModel;
-import org.fundacion.pages.help.QuickStartHelp;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,7 +16,6 @@ import java.util.ArrayList;
  */
 public class HelpPageMain {
   private WebDriver driver;
-  private WebDriverWait wait;
 
   @FindBy(xpath = HelpMainModel.getStartedBtn)
   WebElement getStartedBtn;
@@ -39,8 +35,8 @@ public class HelpPageMain {
   @FindBy(xpath = "//a[text()='Help']")
   WebElement helpLink;
 
-  public HelpPageMain(WebDriver driver) {
 
+  public HelpPageMain(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
   }
@@ -49,7 +45,7 @@ public class HelpPageMain {
     getStartedBtn.click();
   }
 
-  public boolean changeTab() {
+  public boolean verifyQuickStart() {
 boolean flag = false;
     try {
 
@@ -70,27 +66,18 @@ boolean flag = false;
 
         clickGetStartedBtn();
         flag = quickStartTitle.getText().equals(driver.getTitle());
-
+        driver.close();
       }
     } catch (Exception e) {
     }
     return flag;
   }
 
-
   public boolean verifyTitle() {
-    changeTab();
+    verifyQuickStart();
     System.out.println(quickStartTitle.getText());
     System.out.println(driver.getTitle());
     return quickStartTitle.getText().equals(driver.getTitle());
-  }
-
-  public boolean verifyMessage(String text) {
-    return message.getText().equals(text);
-  }
-
-  public QuickStartHelp quickStartHelp() {
-    return new QuickStartHelp(driver);
   }
 
 
