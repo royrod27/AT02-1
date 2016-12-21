@@ -1,1 +1,5 @@
 
+2016-12-21 18:43:16 INFO  - Name of class: AddWorkspaceProjectsMessage: Verify that is possible add a project on the workspace.
+2016-12-21 18:45:40 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-21 18:45:45 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-21 18:51:36 INFO  - Name of class: CreateCommentTestMessage: Verify that is possible add a comment on the story.

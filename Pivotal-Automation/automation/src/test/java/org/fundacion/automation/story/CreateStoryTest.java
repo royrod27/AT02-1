@@ -28,12 +28,12 @@ public class CreateStoryTest extends Base {
    * Login.
    */
   @BeforeMethod
-  public void logIn() {
-    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
+  public void login() {
+    driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
-    login.setUserName("jorge.forero@fundacion-jala.org");
+    login.setUserName(configurationObj.getProperty("userName"));
     login.clickContinue();
-    login.setPassword("jb&11235");
+    login.setPassword(configurationObj.getProperty("userPassword"));
     home = login.clickSubmit();
   }
 

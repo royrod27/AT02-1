@@ -9,6 +9,7 @@ import org.fundacion.pages.stories.SideBarStoriesPage;
 import org.fundacion.pages.stories.StoryPage;
 import org.fundacion.pages.task.TaskPage;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -24,16 +25,19 @@ public class TestCreateMultipleTaskWithTheSameName extends Base {
   String title = "Test create multiple task with the same name";
   String testClass = "testCreateMultipleTaskWithTheSameName";
 
+  @BeforeMethod
+  public void login() {
+    driver.get(configurationObj.getProperty("url"));
+    LoginPage login = new LoginPage(driver);
+    login.setUserName(configurationObj.getProperty("userName"));
+    login.clickContinue();
+    login.setPassword(configurationObj.getProperty("userPassword"));
+    home = login.clickSubmit();
+  }
+
   @Test
   public void testCreateMultipleTaskWithTheSameName() {
     log.info(testClass, title);
-    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
-    LoginPage login = new LoginPage(driver);
-    login.setUserName("angelica.rodriguez@fundacion-jala.org");
-    login.clickContinue();
-    login.setPassword("At24062406");
-    home = login.clickSubmit();
-
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStoryWithTask");
     project.clickNewAccount("Task");
