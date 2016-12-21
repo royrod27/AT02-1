@@ -3,36 +3,28 @@ package org.fundacion.automation.workspaces;
 import static org.testng.Assert.assertFalse;
 
 import org.fundacion.automation.projects.Base;
-import org.fundacion.common.drivers.Driver;
-import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.workspaces.CreateWorkspacePage;
 import org.fundacion.pages.workspaces.ManageWorkspacePage;
 import org.fundacion.pages.workspaces.SettingsWorkspacePage;
 import org.fundacion.pages.workspaces.WorkspaceListPage;
 import org.fundacion.pages.workspaces.WorkspacePage;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-/**
- * Created by David on 12/19/2016.
- */
 public class DeleteWorkspaceWithProject extends Base {
-  HomePage home;
   CreateWorkspacePage createWorkspacePage;
   WorkspacePage workspacePage;
   ManageWorkspacePage manageWorkspace;
   SettingsWorkspacePage settingsWorkspace;
   WorkspaceListPage listWorkspaces;
+  String testClass = "DeleteWorkspaceWithProject";
 
   /**
    * Login.
    */
   @BeforeMethod
   public void login() {
-    driver = Driver.getDriver().openBrowser();
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
     LoginPage login = new LoginPage(driver);
     login.setUserName("Ariel.Vallejos@fundacion-jala.org");
@@ -43,6 +35,7 @@ public class DeleteWorkspaceWithProject extends Base {
 
   @Test
   public void verifyWorkspaceIsDeletedWithProject() {
+    log.info(testClass, "Verify that is possible delete a workspace with projects added.");
     home.clickWorkspaceTab();
     createWorkspacePage = home.clickCreateWorkspaceLink();
     createWorkspacePage.setWorkspaceName("WorkspaceWithProject");
@@ -58,10 +51,6 @@ public class DeleteWorkspaceWithProject extends Base {
     listWorkspaces = home.clickWorkspaceTab();
 
     assertFalse(listWorkspaces.verifyProjectWasDeleted());
-  }
-
-  @AfterMethod
-  public void clean() {
-    home.LogOut();
+    log.info(testClass, "Expect result: Workspace with projects added was delete.");
   }
 }

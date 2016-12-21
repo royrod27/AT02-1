@@ -45,7 +45,7 @@ public class TestCreateAccount extends Base{
    // driver.quit();
   }
 
-  @AfterTest
+  @AfterMethod
   public void logOutProfile(){
     home.LogOut();
   }

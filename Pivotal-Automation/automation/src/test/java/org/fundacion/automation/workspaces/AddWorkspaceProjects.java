@@ -3,8 +3,6 @@ package org.fundacion.automation.workspaces;
 import static org.testng.Assert.assertTrue;
 
 import org.fundacion.automation.projects.Base;
-import org.fundacion.common.drivers.Driver;
-import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.workspaces.CreateWorkspacePage;
 import org.fundacion.pages.workspaces.ManageWorkspacePage;
@@ -14,22 +12,17 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-/**
- * Created by David on 12/16/2016.
- */
 public class AddWorkspaceProjects extends Base {
-  HomePage home;
   CreateWorkspacePage createWorkspace;
   WorkspacePage workspacePage;
   ManageWorkspacePage manageWorkspace;
+  String testClass = "AddWorkspaceProjects";
 
   /**
    * Login.
    */
   @BeforeMethod
   public void login() {
-    driver = Driver.getDriver().openBrowser();
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
     LoginPage login = new LoginPage(driver);
     login.setUserName("Ariel.Vallejos@fundacion-jala.org");
@@ -40,6 +33,7 @@ public class AddWorkspaceProjects extends Base {
 
   @Test
   public void verifyThatIsPosibleAddProjecsOnAWorkspace() {
+    log.info(testClass, "Verify that is possible add a project on the workspace.");
     home.clickWorkspaceTab();
     createWorkspace = home.clickCreateWorkspaceLink();
     createWorkspace.setWorkspaceName("TestToAddProject");
@@ -48,6 +42,7 @@ public class AddWorkspaceProjects extends Base {
     manageWorkspace.addWorkspaceProject("Test");
 
     assertTrue(workspacePage.verifyProjectCreated("Test"));
+    log.info(testClass, "Expect result: Project \"Test\" was add on the workspaces.");
   }
 
   /**
@@ -58,6 +53,5 @@ public class AddWorkspaceProjects extends Base {
     SettingsWorkspacePage settingsWorkspace = workspacePage.settingsWorkspace();
     settingsWorkspace.deleteWorkspace();
     settingsWorkspace.confirmDeleteWorkspace();
-    home.LogOut();
   }
 }

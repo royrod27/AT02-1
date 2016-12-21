@@ -40,4 +40,5 @@ public class Base {
   public void close() {
     driver.close();
   }
+
 }

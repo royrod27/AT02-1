@@ -9,14 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by David on 12/16/2016.
- */
 public class SettingsWorkspacePage {
 
   WebDriver driver;
   WebDriverWait wait;
 
+  /**
+   * SettingsWorkspacePage constructor.
+   * @param driver initialize & instance.
+   */
   public SettingsWorkspacePage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
@@ -38,13 +39,21 @@ public class SettingsWorkspacePage {
   @FindBy(id = SettingsWorkspaceModel.deleteButton)
   WebElement deleteButton;
 
+  /**
+   * Method to delete a workspace,
+   * wait for element delete link & click on it.
+   */
   public void deleteWorkspace() {
     wait.until(ExpectedConditions.elementToBeClickable(deleteLink));
     deleteLink.click();
 
   }
 
-  public HomePage confirmDeleteWorkspace(){
+  /**
+   * Method to confirm delete a workspace pop up.
+   * @return HomePage class with this driver.
+   */
+  public HomePage confirmDeleteWorkspace() {
     wait.until(ExpectedConditions.elementToBeClickable(deleteButton));
     deleteButton.click();
     return new HomePage(driver);

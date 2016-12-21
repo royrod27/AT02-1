@@ -1,5 +1,7 @@
 package org.fundacion.pages.workspaces;
 
+import java.util.List;
+
 import org.fundacion.model.workspaces.ManageWorkspaceModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,15 +11,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
-
-/**
- * Created by David on 12/16/2016.
- */
 public class ManageWorkspacePage {
   WebDriver driver;
   WebDriverWait wait;
 
+  /**
+   * ManageWorkspacePage class constructor.
+   * @param driver initialize & instance.
+   */
   public ManageWorkspacePage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
@@ -36,6 +37,10 @@ public class ManageWorkspacePage {
   @FindBy(xpath = ManageWorkspaceModel.projectRemove)
   List<WebElement> projectRemove;
 
+  /**
+   * Method to add a project on the workspace.
+   * @param projectName to add on the workspace.
+   */
   public void addWorkspaceProject(String projectName) {
     wait.until(ExpectedConditions.elementToBeClickable(selectProject));
     selectProject.click();
@@ -44,9 +49,14 @@ public class ManageWorkspacePage {
     saveProject.click();
   }
 
+  /**
+   * Method to remove the project of the workspace
+   * that was added.
+   * @param name of project that need to be delete.
+   */
   public void removeProject(String name) {
     for (WebElement element : projectName) {
-      if (element.getText().equals(name.toUpperCase())){
+      if (element.getText().equals(name.toUpperCase())) {
         for (WebElement remove : projectRemove) {
           remove.click();
         }
