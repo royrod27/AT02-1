@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProjectsTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.626">
+  <properties />
+  
+  
+            <testcase name="createPrivateProject" time="15.626" classname="org.fundacion.automation.projects.CreatePrivateProjectTest" />
+      
+</testsuite>

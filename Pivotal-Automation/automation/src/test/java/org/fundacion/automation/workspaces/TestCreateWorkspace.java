@@ -38,11 +38,13 @@ public class TestCreateWorkspace extends Base {
 
   @Test
   public void verifyWorkspaceIsCreated() {
+    log.info("TestCreateWorkspace", "Verify that is possible create a Workspace.");
     home.clickWorkspaceTab();
     workspace = home.clickCreateWorkspaceLink();
     workspace.setWorkspaceName("TestFromCode");
     workspacePage = workspace.clickCreateWorkspace();
     assertTrue(workspacePage.workspaceTitle("TestFromCode"));
+    log.info("TestCreateWorkspace", "Expect result: A new workspace was create success.");
   }
 
   /**

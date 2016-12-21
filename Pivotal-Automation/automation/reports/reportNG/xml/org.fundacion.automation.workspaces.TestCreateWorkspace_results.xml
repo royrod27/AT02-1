@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WorkspaceTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.160">
+  <properties />
+  
+  
+            <testcase name="verifyWorkspaceIsCreated" time="7.160" classname="org.fundacion.automation.workspaces.TestCreateWorkspace" />
+      
+</testsuite>

@@ -1,2 +1,6 @@
 2016-12-19 13:39:32 ERROR Log:33 - Name of class: TestDeleteProjectMessage: This is an error
 2016-12-19 16:41:20 ERROR Log:22 - Name of class: TestDeleteProjectMessage: This is an error
+2016-12-21 15:42:04 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-21 15:42:10 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-21 15:43:42 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-21 15:43:49 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.

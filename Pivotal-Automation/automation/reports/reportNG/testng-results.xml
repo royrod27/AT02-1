@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="WorkspaceSuite" duration-ms="92605" started-at="2016-12-21T14:04:48Z" finished-at="2016-12-21T14:06:20Z">
+    <groups>
+    </groups>
+    <test name="WorkspaceTest" duration-ms="92605" started-at="2016-12-21T14:04:48Z" finished-at="2016-12-21T14:06:20Z">
+      <class name="org.fundacion.automation.workspaces.TestDeleteWorkspace">
+        <test-method status="PASS" signature="setSingletonDriver()[pri:0, instance:org.fundacion.automation.workspaces.TestDeleteWorkspace@80ec1f8]" name="setSingletonDriver" is-config="true" duration-ms="7039" started-at="2016-12-21T10:04:41Z" finished-at="2016-12-21T10:04:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setSingletonDriver -->
+        <test-method status="PASS" signature="login()[pri:0, instance:org.fundacion.automation.workspaces.TestDeleteWorkspace@80ec1f8]" name="login" is-config="true" duration-ms="2203" started-at="2016-12-21T10:05:04Z" finished-at="2016-12-21T10:05:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyWorkspaceIsDeleted()[pri:0, instance:org.fundacion.automation.workspaces.TestDeleteWorkspace@80ec1f8]" name="verifyWorkspaceIsDeleted" duration-ms="12902" started-at="2016-12-21T10:05:06Z" finished-at="2016-12-21T10:05:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWorkspaceIsDeleted -->
+        <test-method status="PASS" signature="clean()[pri:0, instance:org.fundacion.automation.workspaces.TestDeleteWorkspace@80ec1f8]" name="clean" is-config="true" duration-ms="814" started-at="2016-12-21T10:05:19Z" finished-at="2016-12-21T10:05:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clean -->
+        <test-method status="PASS" signature="close()[pri:0, instance:org.fundacion.automation.workspaces.TestDeleteWorkspace@80ec1f8]" name="close" is-config="true" duration-ms="2408" started-at="2016-12-21T10:06:21Z" finished-at="2016-12-21T10:06:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- org.fundacion.automation.workspaces.TestDeleteWorkspace -->
+      <class name="org.fundacion.automation.workspaces.DeleteWorkspaceWithProject">
+        <test-method status="PASS" signature="login()[pri:0, instance:org.fundacion.automation.workspaces.DeleteWorkspaceWithProject@6b0c2d26]" name="login" is-config="true" duration-ms="2838" started-at="2016-12-21T10:06:10Z" finished-at="2016-12-21T10:06:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyWorkspaceIsDeletedWithProject()[pri:0, instance:org.fundacion.automation.workspaces.DeleteWorkspaceWithProject@6b0c2d26]" name="verifyWorkspaceIsDeletedWithProject" duration-ms="7204" started-at="2016-12-21T10:06:13Z" finished-at="2016-12-21T10:06:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWorkspaceIsDeletedWithProject -->
+        <test-method status="PASS" signature="clean()[pri:0, instance:org.fundacion.automation.workspaces.DeleteWorkspaceWithProject@6b0c2d26]" name="clean" is-config="true" duration-ms="116" started-at="2016-12-21T10:06:20Z" finished-at="2016-12-21T10:06:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clean -->
+      </class> <!-- org.fundacion.automation.workspaces.DeleteWorkspaceWithProject -->
+      <class name="org.fundacion.automation.workspaces.TestCreateWorkspace">
+        <test-method status="PASS" signature="login()[pri:0, instance:org.fundacion.automation.workspaces.TestCreateWorkspace@6e38921c]" name="login" is-config="true" duration-ms="5836" started-at="2016-12-21T10:04:48Z" finished-at="2016-12-21T10:04:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyWorkspaceIsCreated()[pri:0, instance:org.fundacion.automation.workspaces.TestCreateWorkspace@6e38921c]" name="verifyWorkspaceIsCreated" duration-ms="7160" started-at="2016-12-21T10:04:53Z" finished-at="2016-12-21T10:05:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWorkspaceIsCreated -->
+        <test-method status="PASS" signature="clean()[pri:0, instance:org.fundacion.automation.workspaces.TestCreateWorkspace@6e38921c]" name="clean" is-config="true" duration-ms="2990" started-at="2016-12-21T10:05:01Z" finished-at="2016-12-21T10:05:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clean -->
+      </class> <!-- org.fundacion.automation.workspaces.TestCreateWorkspace -->
+      <class name="org.fundacion.automation.workspaces.RemoveWorkspaceProjects">
+        <test-method status="PASS" signature="login()[pri:0, instance:org.fundacion.automation.workspaces.RemoveWorkspaceProjects@3d3fcdb0]" name="login" is-config="true" duration-ms="3915" started-at="2016-12-21T10:05:36Z" finished-at="2016-12-21T10:05:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyThatIsPosibleRemoveProjecsOnAWorkspace()[pri:0, instance:org.fundacion.automation.workspaces.RemoveWorkspaceProjects@3d3fcdb0]" name="verifyThatIsPosibleRemoveProjecsOnAWorkspace" duration-ms="25619" started-at="2016-12-21T10:05:40Z" finished-at="2016-12-21T10:06:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyThatIsPosibleRemoveProjecsOnAWorkspace -->
+        <test-method status="PASS" signature="clean()[pri:0, instance:org.fundacion.automation.workspaces.RemoveWorkspaceProjects@3d3fcdb0]" name="clean" is-config="true" duration-ms="4012" started-at="2016-12-21T10:06:06Z" finished-at="2016-12-21T10:06:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clean -->
+      </class> <!-- org.fundacion.automation.workspaces.RemoveWorkspaceProjects -->
+      <class name="org.fundacion.automation.workspaces.AddWorkspaceProjects">
+        <test-method status="PASS" signature="login()[pri:0, instance:org.fundacion.automation.workspaces.AddWorkspaceProjects@641147d0]" name="login" is-config="true" duration-ms="2908" started-at="2016-12-21T10:05:20Z" finished-at="2016-12-21T10:05:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="verifyThatIsPosibleAddProjecsOnAWorkspace()[pri:0, instance:org.fundacion.automation.workspaces.AddWorkspaceProjects@641147d0]" name="verifyThatIsPosibleAddProjecsOnAWorkspace" duration-ms="10740" started-at="2016-12-21T10:05:22Z" finished-at="2016-12-21T10:05:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyThatIsPosibleAddProjecsOnAWorkspace -->
+        <test-method status="PASS" signature="clean()[pri:0, instance:org.fundacion.automation.workspaces.AddWorkspaceProjects@641147d0]" name="clean" is-config="true" duration-ms="3321" started-at="2016-12-21T10:05:33Z" finished-at="2016-12-21T10:05:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clean -->
+      </class> <!-- org.fundacion.automation.workspaces.AddWorkspaceProjects -->
+    </test> <!-- WorkspaceTest -->
+  </suite> <!-- WorkspaceSuite -->
+</testng-results>

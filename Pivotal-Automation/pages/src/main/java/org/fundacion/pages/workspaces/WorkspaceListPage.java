@@ -1,5 +1,8 @@
 package org.fundacion.pages.workspaces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.fundacion.model.workspaces.WorkspaceListModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,8 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by David on 12/19/2016.
@@ -20,8 +21,11 @@ public class WorkspaceListPage {
   WebDriverWait wait;
   String elementDeleted;
 
+  /**
+   * WorkspaceListPage constructor.
+   * @param driver initialize & instance.
+   */
   public WorkspaceListPage(WebDriver driver) {
-
     AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver, 100);
     PageFactory.initElements(factory, this);
     this.driver = driver;
@@ -37,6 +41,11 @@ public class WorkspaceListPage {
     driver.findElement(By.xpath("//a[text() = '" + name + "']")).click();
   }
 
+  /**
+   * Method to verify if a project was delete
+   * from the workspace.
+   * @return boolean result.
+   */
   public Boolean verifyProjectWasDeleted() {
     Boolean flag = false;
     ArrayList<String> hrefs = new ArrayList<String>();
@@ -46,8 +55,9 @@ public class WorkspaceListPage {
     }
 
     for (String index : hrefs) {
-      if (index.equals(elementDeleted))
+      if (index.equals(elementDeleted)) {
         flag = true;
+      }
     }
 
     return flag;

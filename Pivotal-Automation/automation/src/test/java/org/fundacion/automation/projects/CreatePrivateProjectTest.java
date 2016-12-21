@@ -42,7 +42,7 @@ public class CreatePrivateProjectTest extends Base {
     settingsPage.deleteProject();
   }
 
-  @AfterTest
+  @AfterMethod
   public void logOutProfile(){
     home.LogOut();
   }

@@ -19,7 +19,7 @@ public class TestDeleteProject extends ABase {
 
     @BeforeMethod
     public void testCreateProject() {
-
+        driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
         LoginPage login = new LoginPage(driver);
         login.setUserName("sergio.landa@fundacion-jala.org");
         login.clickContinue();
@@ -41,7 +41,7 @@ public class TestDeleteProject extends ABase {
         assertFalse(projectsWorkSpacesPage.existProject());
     }
 
-    @AfterTest
+    @AfterMethod
     public void logOutProfile() {
         homePage.LogOut();
     }
