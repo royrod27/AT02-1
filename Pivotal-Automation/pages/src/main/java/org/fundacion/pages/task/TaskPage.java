@@ -58,6 +58,7 @@ public class TaskPage {
 
     public TaskPage(WebDriver driver) {
         this.driver = driver;
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         PageFactory.initElements(driver, this);
     }
 
@@ -87,7 +88,7 @@ public class TaskPage {
     }
 
     public void inputNewName(String nameNew){
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+
         txtEdit.clear();
         txtEdit.sendKeys(nameNew);
         saveEditButtom.click();
