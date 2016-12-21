@@ -1,15 +1,17 @@
 package org.fundacion.pages.help;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+
 import org.fundacion.model.help.HelpMainModel;
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
+
 
 /**
  * Created by Fernando on 12/19/2016.
@@ -20,21 +22,8 @@ public class HelpPageMain {
   @FindBy(xpath = HelpMainModel.getStartedBtn)
   WebElement getStartedBtn;
 
-  @FindBy(xpath = HelpMainModel.learnMoreBtn)
-  WebElement learnMoreBtn;
-
-  @FindBy(xpath = HelpMainModel.helpPageTitle)
-  WebElement helpPageTitle;
-
-  @FindBy(css = HelpMainModel.message)
-  WebElement message;
-
   @FindBy(xpath = HelpMainModel.quickStartTitle)
   WebElement quickStartTitle;
-
-  @FindBy(xpath = "//a[text()='Help']")
-  WebElement helpLink;
-
 
   public HelpPageMain(WebDriver driver) {
     this.driver = driver;
@@ -45,8 +34,12 @@ public class HelpPageMain {
     getStartedBtn.click();
   }
 
+  /** Verify QuickStart Page.
+   *
+   * @return Flag true if Quick Start Title is found.
+   */
   public boolean verifyQuickStart() {
-boolean flag = false;
+    boolean flag = false;
     try {
 
       Thread.sleep(5000);
@@ -62,23 +55,14 @@ boolean flag = false;
         robot.keyPress(KeyEvent.VK_TAB);
         robot.keyRelease(KeyEvent.VK_TAB);
         robot.keyRelease(KeyEvent.VK_CONTROL);
-        System.out.println(driver.getTitle() + " Titulo web: " + i);
 
         clickGetStartedBtn();
         flag = quickStartTitle.getText().equals(driver.getTitle());
         driver.close();
       }
-    } catch (Exception e) {
+    } catch (Exception exception) {
     }
     return flag;
   }
-
-  public boolean verifyTitle() {
-    verifyQuickStart();
-    System.out.println(quickStartTitle.getText());
-    System.out.println(driver.getTitle());
-    return quickStartTitle.getText().equals(driver.getTitle());
-  }
-
 
 }

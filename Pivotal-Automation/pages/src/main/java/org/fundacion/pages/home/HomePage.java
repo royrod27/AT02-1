@@ -1,5 +1,6 @@
 package org.fundacion.pages.home;
 
+import org.fundacion.model.help.HelpMainModel;
 import org.fundacion.model.home.HomeModel;
 import org.fundacion.pages.help.ApiDocumentationPage;
 import org.fundacion.pages.help.HelpPageMain;
@@ -22,7 +23,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class HomePage {
 
   private WebDriver driver;
-  private WebDriverWait wait;
 
   @FindBy(xpath = HomeModel.createProjectBtn)
   WebElement createProjectBtn;
@@ -30,20 +30,19 @@ public class HomePage {
   @FindBy(xpath = HomeModel.pivotalBtn)
   private WebElement pivotalBtn;
 
-
   @FindBy(css = HomeModel.workspaceTab)
   WebElement workspaceTab;
 
   @FindBy(css = HomeModel.createWorkspaceButton)
   WebElement createWorkspace;
 
-  @FindBy(xpath = "//div/header/ul/li[3]/div")
+  @FindBy(xpath = HomeModel.logOutBtn)
   WebElement logOutBtn;
 
-  @FindBy(xpath = "//div/div/ul/li[4]/form/button")
+  @FindBy(xpath = HomeModel.signOutBtn)
   WebElement signOutBtn;
 
-  @FindBy(xpath = "//a[text()='Help']")
+  @FindBy(xpath = HomeModel.helpLink)
   WebElement helpLink;
 
 
@@ -57,7 +56,7 @@ public class HomePage {
     return new CreateProjectPage(this.driver);
   }
 
-  public void LogOut() {
+  public void logOut() {
       logOutBtn.click();
       signOutBtn.click();
   }

@@ -1,16 +1,12 @@
 package org.fundacion.automation.projects;
 
-import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.projects.ProjectMenuPage;
 import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertFalse;
 
@@ -48,7 +44,7 @@ public class CreatePublicProjectTest extends Base{
 
   @AfterMethod
   public void logOutProfile(){
-    home.LogOut();
+    home.logOut();
   }
 
 }

@@ -52,6 +52,6 @@ public class TestDeleteProject extends Base {
 
   @AfterTest
   public void logOutProfile() {
-    homePage.LogOut();
+    homePage.logOut();
   }
 }

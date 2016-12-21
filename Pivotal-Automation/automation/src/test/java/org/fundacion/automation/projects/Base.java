@@ -32,7 +32,7 @@ public class Base {
 
   @AfterClass
   public void logOutProfile() {
-    home.LogOut();
+    home.logOut();
   }
 
 

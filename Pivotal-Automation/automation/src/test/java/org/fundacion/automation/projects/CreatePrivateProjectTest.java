@@ -44,7 +44,7 @@ public class CreatePrivateProjectTest extends Base {
 
   @AfterMethod
   public void logOutProfile(){
-    home.LogOut();
+    home.logOut();
   }
 
 }
