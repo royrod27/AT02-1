@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by JorgeForero on 12/15/2016.
  */
@@ -32,13 +35,19 @@ public class StoryPage {
   @FindBy(name = StoryModel.storyDescriptionTextField)
   WebElement storyDescriptionTextField;
 
+  @FindBy(xpath = StoryModel.storyEstimate)
+  WebElement storyEstimate;
+
+  @FindBy(xpath = StoryModel.storyEstimateIn2)
+  WebElement storyEstimateIn2;
+
   @FindBy(xpath = StoryModel.doneDescriptionButton)
   WebElement doneDescriptionButton;
 
   @FindBy(css = StoryModel.storyExpander)
   WebElement storyExpander;
 
-  @FindBy(id = StoryModel.comment)
+  @FindBy(xpath = StoryModel.comment)
   private WebElement comment;
 
   @FindBy(css = StoryModel.addCommentButton)
@@ -55,6 +64,12 @@ public class StoryPage {
 
   @FindBy(xpath = StoryModel.cancelDeleteButton)
   WebElement cancelDeleteButton;
+
+  @FindBy(xpath = StoryModel.stories)
+  List<WebElement> stories;
+
+  @FindBy(xpath = StoryModel.comments)
+  List<WebElement> comments;
 
   public StoryPage(WebDriver driver) {
     this.driver = driver;
@@ -86,6 +101,11 @@ public class StoryPage {
     return descriptionText.getText();
   }
 
+  public String getStoryEstimate() {
+    return storyEstimate.getText();
+  }
+
+
   public void setDescriptionTextarea(String storyDescription) {
     editDescriptionButton.click();
     storyDescriptionTextField.clear();
@@ -99,6 +119,17 @@ public class StoryPage {
     comment.clear();
     comment.sendKeys(storyComment);
     addCommentButton.click();
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+
+  }
+
+  public void setStoryEstimateIn2() {
+    storyEstimate.click();
+    storyEstimateIn2.click();
   }
 
   public void clickDeleteStory() {
@@ -109,6 +140,23 @@ public class StoryPage {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+  }
+
+  public Boolean verifyDeleteStory(String projectName) {
+    return existElement(stories, projectName);
+  }
+
+  public Boolean verifyExistCommentStory(String comment) {
+    return existElement(comments, comment);
+  }
+
+  private Boolean existElement(List<WebElement> listElements, String name) {
+    Boolean flag = false;
+    for (WebElement element : listElements) {
+      if (element.getText().contains(name))
+        flag = true;
+    }
+    return flag;
   }
 
   public TaskPage clickCreateTask(WebDriver driver) {

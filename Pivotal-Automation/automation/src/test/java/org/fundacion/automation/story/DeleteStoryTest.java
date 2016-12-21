@@ -13,12 +13,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertFalse;
 
 /**
- * Created by JorgeForero on 12/15/2016.
+ * Created by JorgeForero on 12/20/2016.
  */
-public class CreateStoryTest extends Base {
+public class DeleteStoryTest extends Base {
   HomePage home;
   ProjectMenuPage projectMenuPage;
   SettingsPage settingsPage;
@@ -36,22 +36,24 @@ public class CreateStoryTest extends Base {
   @Test
   public void testCreateNewStory() {
     CreateProjectPage project = home.clickCreateProject();
-    project.setProjectName("TestStory");
+    project.setProjectName("TestDeleteStory");
     project.clickSelectAccount("Maria");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();
     storyPage = sideBarStories.clickOnAddStoryButton();
-    storyPage.setTitleStory("TestStory");
+    storyPage.setTitleStory("TestDeleteStory");
     storyPage.clickOnCreateStory();
     storyPage.clickOnExpandStory();
 
-    assertEquals("TestStory", storyPage.getStoryName());
+    storyPage.clickDeleteStory();
+
+    assertFalse(storyPage.verifyDeleteStory("TestDeleteStory"));
+
   }
 
   @AfterMethod
   public void clean() {
-    storyPage.clickDeleteStory();
     settingsPage = projectMenuPage.clickSettings();
     settingsPage.deleteProject();
   }

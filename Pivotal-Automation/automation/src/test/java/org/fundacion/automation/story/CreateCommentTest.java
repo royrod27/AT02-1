@@ -13,12 +13,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 /**
- * Created by JorgeForero on 12/15/2016.
+ * Created by JorgeForero on 12/19/2016.
  */
-public class CreateStoryTest extends Base {
+public class CreateCommentTest extends Base {
   HomePage home;
   ProjectMenuPage projectMenuPage;
   SettingsPage settingsPage;
@@ -34,24 +34,25 @@ public class CreateStoryTest extends Base {
   }
 
   @Test
-  public void testCreateNewStory() {
+  public void testCreateNewComment() {
     CreateProjectPage project = home.clickCreateProject();
-    project.setProjectName("TestStory");
+    project.setProjectName("TestStoryComment");
     project.clickSelectAccount("Maria");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();
     storyPage = sideBarStories.clickOnAddStoryButton();
-    storyPage.setTitleStory("TestStory");
+    storyPage.setTitleStory("TestStoryComment");
     storyPage.clickOnCreateStory();
     storyPage.clickOnExpandStory();
 
-    assertEquals("TestStory", storyPage.getStoryName());
+    storyPage.setComment("Comment Test");
+
+    assertTrue("Comment Test", storyPage.verifyExistCommentStory("Comment Test"));
   }
 
   @AfterMethod
   public void clean() {
-    storyPage.clickDeleteStory();
     settingsPage = projectMenuPage.clickSettings();
     settingsPage.deleteProject();
   }
@@ -60,4 +61,5 @@ public class CreateStoryTest extends Base {
   public void logOutProfile() {
     home.LogOut();
   }
+
 }

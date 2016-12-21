@@ -16,9 +16,9 @@ import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;
 
 /**
- * Created by JorgeForero on 12/15/2016.
+ * Created by JorgeForero on 12/20/2016.
  */
-public class CreateStoryTest extends Base {
+public class UpdateStoryTest extends Base {
   HomePage home;
   ProjectMenuPage projectMenuPage;
   SettingsPage settingsPage;
@@ -34,19 +34,20 @@ public class CreateStoryTest extends Base {
   }
 
   @Test
-  public void testCreateNewStory() {
+  public void testUpdateStory() {
     CreateProjectPage project = home.clickCreateProject();
-    project.setProjectName("TestStory");
+    project.setProjectName("TestUpdateStory");
     project.clickSelectAccount("Maria");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();
     storyPage = sideBarStories.clickOnAddStoryButton();
-    storyPage.setTitleStory("TestStory");
+    storyPage.setTitleStory("TestUpdateStory");
     storyPage.clickOnCreateStory();
     storyPage.clickOnExpandStory();
 
-    assertEquals("TestStory", storyPage.getStoryName());
+    storyPage.setStoryEstimateIn2();
+    assertEquals("2 Points", storyPage.getStoryEstimate());
   }
 
   @AfterMethod
