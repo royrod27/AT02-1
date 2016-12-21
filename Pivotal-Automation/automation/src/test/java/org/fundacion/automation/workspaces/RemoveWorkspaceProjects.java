@@ -23,11 +23,11 @@ public class RemoveWorkspaceProjects extends Base {
    */
   @BeforeMethod
   public void login() {
-    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
+    driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
-    login.setUserName("Ariel.Vallejos@fundacion-jala.org");
+    login.setUserName(configurationObj.getProperty("userName"));
     login.clickContinue();
-    login.setPassword("AT02david");
+    login.setPassword(configurationObj.getProperty("userPassword"));
     home = login.clickSubmit();
   }
 
