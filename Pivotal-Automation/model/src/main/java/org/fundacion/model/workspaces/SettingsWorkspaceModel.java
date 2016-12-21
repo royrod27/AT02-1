@@ -1,8 +1,5 @@
 package org.fundacion.model.workspaces;
 
-/**
- * Created by David on 12/16/2016.
- */
 public class SettingsWorkspaceModel {
   public static final String workspaceName = "workspace[name]";
   public static final String deleteLink = "delete_link";

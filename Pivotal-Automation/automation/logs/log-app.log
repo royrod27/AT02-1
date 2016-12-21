@@ -4,3 +4,23 @@
 2016-12-21 15:42:10 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
 2016-12-21 15:43:42 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
 2016-12-21 15:43:49 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-21 16:38:35 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-21 16:38:40 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-21 16:38:54 INFO  - Name of class: TestDeleteWorkspaceMessage: Verify that is possible delete a workspace.
+2016-12-21 16:39:17 INFO  - Name of class: AddWorkspaceProjectsMessage: Verify that is possible add a project on the workspace.
+2016-12-21 16:39:25 INFO  - Name of class: AddWorkspaceProjectsMessage: Expect result: Project "Test" was add on the workspaces.
+2016-12-21 16:39:37 INFO  - Name of class: RemoveWorkspaceProjectsMessage: Verify that is possible remove a project on the workspace.
+2016-12-21 16:39:59 INFO  - Name of class: RemoveWorkspaceProjectsMessage: Expect result: Project was remove from the workspace.
+2016-12-21 16:40:13 INFO  - Name of class: DeleteWorkspaceWithProjectMessage: Verify that is possible delete a workspace with projects added.
+2016-12-21 16:40:21 INFO  - Name of class: DeleteWorkspaceWithProjectMessage: Expect result: Workspace with projects added was delete.
+2016-12-21 16:43:00 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-21 16:43:05 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-21 16:43:14 INFO  - Name of class: TestDeleteWorkspaceMessage: Verify that is possible delete a workspace.
+2016-12-21 16:43:31 INFO  - Name of class: TestDeleteWorkspaceMessage: Expect result: Workspace was delete success.
+2016-12-21 16:43:38 INFO  - Name of class: AddWorkspaceProjectsMessage: Verify that is possible add a project on the workspace.
+2016-12-21 16:43:46 INFO  - Name of class: AddWorkspaceProjectsMessage: Expect result: Project "Test" was add on the workspaces.
+2016-12-21 16:43:58 INFO  - Name of class: RemoveWorkspaceProjectsMessage: Verify that is possible remove a project on the workspace.
+2016-12-21 16:44:21 INFO  - Name of class: RemoveWorkspaceProjectsMessage: Expect result: Project was remove from the workspace.
+2016-12-21 16:44:34 INFO  - Name of class: DeleteWorkspaceWithProjectMessage: Verify that is possible delete a workspace with projects added.
+2016-12-21 16:44:43 INFO  - Name of class: DeleteWorkspaceWithProjectMessage: Expect result: Workspace with projects added was delete.
+2016-12-21 16:47:48 ERROR - Name of class: TestDeleteProjectMessage: This is an error

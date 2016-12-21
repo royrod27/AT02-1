@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="103.731" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="121.313" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\bin"/>
@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="verifyWorkspaceIsCreated" classname="org.fundacion.automation.workspaces.TestCreateWorkspace" time="7.167"/>
-  <testcase name="verifyWorkspaceIsDeleted" classname="org.fundacion.automation.workspaces.TestDeleteWorkspace" time="12.9"/>
-  <testcase name="verifyThatIsPosibleAddProjecsOnAWorkspace" classname="org.fundacion.automation.workspaces.AddWorkspaceProjects" time="10.738"/>
-  <testcase name="verifyThatIsPosibleRemoveProjecsOnAWorkspace" classname="org.fundacion.automation.workspaces.RemoveWorkspaceProjects" time="25.618"/>
-  <testcase name="verifyWorkspaceIsDeletedWithProject" classname="org.fundacion.automation.workspaces.DeleteWorkspaceWithProject" time="7.203"/>
+  <testcase name="verifyWorkspaceIsCreated" classname="org.fundacion.automation.workspaces.TestCreateWorkspace" time="5.111"/>
+  <testcase name="verifyWorkspaceIsDeleted" classname="org.fundacion.automation.workspaces.TestDeleteWorkspace" time="17.29"/>
+  <testcase name="verifyThatIsPosibleAddProjecsOnAWorkspace" classname="org.fundacion.automation.workspaces.AddWorkspaceProjects" time="7.246"/>
+  <testcase name="verifyThatIsPosibleRemoveProjecsOnAWorkspace" classname="org.fundacion.automation.workspaces.RemoveWorkspaceProjects" time="23.37"/>
+  <testcase name="verifyWorkspaceIsDeletedWithProject" classname="org.fundacion.automation.workspaces.DeleteWorkspaceWithProject" time="8.359"/>
 </testsuite>

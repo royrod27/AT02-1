@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="7.204">
+           time="8.358">
   <properties />
   
   
-            <testcase name="verifyWorkspaceIsDeletedWithProject" time="7.204" classname="org.fundacion.automation.workspaces.DeleteWorkspaceWithProject" />
+            <testcase name="verifyWorkspaceIsDeletedWithProject" time="8.358" classname="org.fundacion.automation.workspaces.DeleteWorkspaceWithProject" />
       
 </testsuite>

@@ -9,9 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by David on 12/16/2016.
- */
 public class SettingsWorkspacePage {
 
   WebDriver driver;

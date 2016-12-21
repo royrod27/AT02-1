@@ -3,8 +3,6 @@ package org.fundacion.automation.workspaces;
 import static org.testng.Assert.assertFalse;
 
 import org.fundacion.automation.projects.Base;
-import org.fundacion.common.drivers.Driver;
-import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.workspaces.CreateWorkspacePage;
 import org.fundacion.pages.workspaces.ManageWorkspacePage;
@@ -14,22 +12,17 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-/**
- * Created by David on 12/16/2016.
- */
 public class RemoveWorkspaceProjects extends Base {
-  HomePage home;
   CreateWorkspacePage createWorkspace;
   WorkspacePage workspacePage;
   ManageWorkspacePage manageWorkspace;
+  String testClass = "RemoveWorkspaceProjects";
 
   /**
    * Login.
    */
   @BeforeMethod
   public void login() {
-    driver = Driver.getDriver().openBrowser();
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
     LoginPage login = new LoginPage(driver);
     login.setUserName("Ariel.Vallejos@fundacion-jala.org");
@@ -40,6 +33,7 @@ public class RemoveWorkspaceProjects extends Base {
 
   @Test
   public void verifyThatIsPosibleRemoveProjecsOnAWorkspace() {
+    log.info(testClass, "Verify that is possible remove a project on the workspace.");
     home.clickWorkspaceTab();
     createWorkspace = home.clickCreateWorkspaceLink();
     createWorkspace.setWorkspaceName("RemoveProjectOnWorkspace");
@@ -52,6 +46,7 @@ public class RemoveWorkspaceProjects extends Base {
     manageWorkspace.removeProject("Test");
 
     assertFalse(workspacePage.verifyProjectCreated("Test"));
+    log.info(testClass, "Expect result: Project was remove from the workspace.");
   }
 
   /**
@@ -62,6 +57,5 @@ public class RemoveWorkspaceProjects extends Base {
     SettingsWorkspacePage settingsWorkspace = workspacePage.settingsWorkspace();
     settingsWorkspace.deleteWorkspace();
     settingsWorkspace.confirmDeleteWorkspace();
-    home.LogOut();
   }
 }

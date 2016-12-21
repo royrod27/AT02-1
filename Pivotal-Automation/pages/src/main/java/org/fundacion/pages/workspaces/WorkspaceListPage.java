@@ -12,10 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-/**
- * Created by David on 12/19/2016.
- */
 public class WorkspaceListPage {
   WebDriver driver;
   WebDriverWait wait;

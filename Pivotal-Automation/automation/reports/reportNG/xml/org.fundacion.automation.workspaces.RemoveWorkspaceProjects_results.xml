@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="25.619">
+           time="23.370">
   <properties />
   
   
-            <testcase name="verifyThatIsPosibleRemoveProjecsOnAWorkspace" time="25.619" classname="org.fundacion.automation.workspaces.RemoveWorkspaceProjects" />
+            <testcase name="verifyThatIsPosibleRemoveProjecsOnAWorkspace" time="23.370" classname="org.fundacion.automation.workspaces.RemoveWorkspaceProjects" />
       
 </testsuite>

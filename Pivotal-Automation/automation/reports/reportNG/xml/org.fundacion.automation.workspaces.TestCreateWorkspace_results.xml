@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="7.160">
+           time="5.102">
   <properties />
   
   
-            <testcase name="verifyWorkspaceIsCreated" time="7.160" classname="org.fundacion.automation.workspaces.TestCreateWorkspace" />
+            <testcase name="verifyWorkspaceIsCreated" time="5.102" classname="org.fundacion.automation.workspaces.TestCreateWorkspace" />
       
 </testsuite>
