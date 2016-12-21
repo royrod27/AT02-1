@@ -1,11 +1,9 @@
 package org.fundacion.pages.home;
 
-import org.fundacion.model.help.HelpMainModel;
 import org.fundacion.model.home.HomeModel;
-import org.fundacion.pages.help.ApiDocumentationPage;
+import org.fundacion.pages.help.FeedBackPage;
 import org.fundacion.pages.help.HelpPageMain;
 import org.fundacion.pages.help.LearnMorePage;
-import org.fundacion.pages.help.QuickStartHelp;
 import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.projects.ProjectsWorkSpacesPage;
 import org.fundacion.pages.workspaces.CreateWorkspacePage;
@@ -14,8 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 /**
  * Created by Topo on 9/12/2016.
@@ -57,8 +54,8 @@ public class HomePage {
   }
 
   public void logOut() {
-      logOutBtn.click();
-      signOutBtn.click();
+    logOutBtn.click();
+    signOutBtn.click();
   }
 
   public ProjectsWorkSpacesPage clickProjectsAndWorkSpaces() {
@@ -71,7 +68,7 @@ public class HomePage {
     return new WorkspaceListPage(driver);
   }
 
-  public HelpPageMain clickHelpPageButton(){
+  public HelpPageMain clickHelpPageButton() {
     helpLink.click();
     return new HelpPageMain(driver);
   }
@@ -81,9 +78,14 @@ public class HomePage {
     return new CreateWorkspacePage(driver);
   }
 
-  public LearnMorePage clickLearnMoreButton(){
+  public LearnMorePage clickLearnMoreButton() {
     helpLink.click();
     return new LearnMorePage(driver);
+  }
+
+  public FeedBackPage clickGiveUsFeedBackLink() {
+    helpLink.click();
+    return new FeedBackPage(driver);
   }
 
 }

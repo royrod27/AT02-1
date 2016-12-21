@@ -8,6 +8,7 @@
         <classes>
             <class name="org.fundacion.automation.help.TestVerifyQuickStartPage"/>
             <class name="org.fundacion.automation.help.TestLearnMore"/>
+            <class name="org.fundacion.automation.help.TestFeedBack"/>
         </classes>
     </test>
 </suite>

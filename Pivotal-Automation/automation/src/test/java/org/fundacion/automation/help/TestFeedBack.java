@@ -3,19 +3,19 @@ package org.fundacion.automation.help;
 import static org.testng.AssertJUnit.assertTrue;
 
 import org.fundacion.automation.projects.Base;
-import org.fundacion.pages.help.LearnMorePage;
+import org.fundacion.pages.help.FeedBackPage;
 import org.fundacion.pages.login.LoginPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-/**
- * Created by Fernando on 21/12/2016.
- */
-public class TestLearnMore extends Base {
 
-  String title = "Test Learn More Page";
-  String testClass = "TestLearnMore";
+/**
+ * Created by Administrator on 12/21/2016.
+ */
+public class TestFeedBack extends Base {
+  String title = "Test FeedBack Page";
+  String testClass = "TestFeedBack";
 
   /** Login Method.
    *
@@ -31,12 +31,12 @@ public class TestLearnMore extends Base {
   }
 
   @Test
-  public void verifyLearnMorePageTitleCorrectlyLoaded() {
+  public void verifyFeedBackPageTitleIsTheSameAsPageTab() {
     log.info(testClass, title);
 
-    LearnMorePage learnMorePage = home.clickLearnMoreButton();
-    assertTrue(learnMorePage.verifyLearnMore());
+    FeedBackPage feedBackPage = home.clickGiveUsFeedBackLink();
+    assertTrue(feedBackPage.verifyFeedBack());
 
-    log.info(testClass, "Verify that Learn More page title is the same as the Learn More tab");
+    log.info(testClass, "Verify that FeedBack page title is the same as the feedback tab title");
   }
 }
