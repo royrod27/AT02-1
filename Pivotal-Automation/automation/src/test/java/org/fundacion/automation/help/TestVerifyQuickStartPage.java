@@ -5,7 +5,8 @@ import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.help.HelpPageMain;
-import org.fundacion.pages.help.QuickStartHelp;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -31,8 +32,12 @@ public class TestVerifyQuickStartPage extends Base {
 
     HelpPageMain helpPageMain = home.clickHelpPageButton();
 
-    assertTrue(helpPageMain.changeTab());
+    assertTrue(helpPageMain.verifyQuickStart());
 
+  }
 
+  @AfterClass
+  public void logOutProfile() {
+    home.LogOut();
   }
 }
