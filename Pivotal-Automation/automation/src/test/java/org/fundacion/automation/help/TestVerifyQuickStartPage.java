@@ -3,13 +3,9 @@ package org.fundacion.automation.help;
 import static org.testng.AssertJUnit.assertTrue;
 
 import org.fundacion.automation.projects.Base;
-import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.help.HelpPageMain;
-import org.fundacion.pages.home.HomePage;
-
 import org.fundacion.pages.login.LoginPage;
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -20,10 +16,13 @@ import org.testng.annotations.Test;
  */
 
 public class TestVerifyQuickStartPage extends Base {
-  HomePage home;
-  String title = "Test Quick Start Page";
-  String testClass = "TestLearnMore";
 
+  String title = "Test Quick Start Page";
+  String testClass = "TestVerifyQuickStartPage";
+
+  /** Login Method.
+   *
+   */
   @BeforeMethod
   public void login() {
     driver.get(configurationObj.getProperty("url"));
@@ -44,8 +43,4 @@ public class TestVerifyQuickStartPage extends Base {
     log.info(testClass, "Verify that Quick Start title is the same as the Quick Page tab title");
   }
 
-  @AfterClass
-  public void logOutProfile() {
-    home.logOut();
-  }
 }
