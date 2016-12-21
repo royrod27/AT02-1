@@ -22,6 +22,9 @@ public class DeleteStoryTest extends Base {
   SettingsPage settingsPage;
   StoryPage storyPage;
 
+  /**
+   * Login.
+   */
   @BeforeMethod
   public void logIn() {
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
@@ -33,7 +36,8 @@ public class DeleteStoryTest extends Base {
   }
 
   @Test
-  public void testCreateNewStory() {
+  public void testDeleteAStory() {
+    log.info("DeleteStoryTest" , "Verify that is possible delete a story of a project.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestDeleteStory");
     project.clickSelectAccount("Maria");
@@ -48,9 +52,12 @@ public class DeleteStoryTest extends Base {
     storyPage.clickDeleteStory();
 
     assertFalse(storyPage.verifyDeleteStory("TestDeleteStory"));
-
+    log.info("DeleteStoryTest", "Expect result: Story was remove from the projects.");
   }
 
+  /**
+   * Delete project & logout.
+   */
   @AfterMethod
   public void clean() {
     settingsPage = projectMenuPage.clickSettings();

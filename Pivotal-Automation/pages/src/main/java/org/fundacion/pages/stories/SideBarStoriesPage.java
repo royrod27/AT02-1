@@ -15,7 +15,7 @@ public class SideBarStoriesPage {
   WebDriver driver;
   WebDriverWait wait;
 
-  @FindBy(xpath = SideBarStoriesModel.addStoryButton)
+  @FindBy(css = SideBarStoriesModel.addStoryButton)
   WebElement addStoryButton;
 
   public SideBarStoriesPage(WebDriver driver) {
@@ -25,7 +25,6 @@ public class SideBarStoriesPage {
   }
 
   public StoryPage clickOnAddStoryButton() {
-    wait.until(ExpectedConditions.titleContains("Pivotal"));
     wait.until(ExpectedConditions.elementToBeClickable(addStoryButton));
     addStoryButton.click();
     return new StoryPage(driver);

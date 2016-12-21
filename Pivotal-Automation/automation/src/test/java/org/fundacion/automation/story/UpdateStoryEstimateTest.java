@@ -16,11 +16,14 @@ import org.testng.annotations.Test;
 /**
  * Created by JorgeForero on 12/20/2016.
  */
-public class UpdateStoryTest extends Base {
+public class UpdateStoryEstimateTest extends Base {
   ProjectMenuPage projectMenuPage;
   SettingsPage settingsPage;
   StoryPage storyPage;
 
+  /**
+   * Login.
+   */
   @BeforeMethod
   public void logIn() {
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
@@ -33,21 +36,26 @@ public class UpdateStoryTest extends Base {
 
   @Test
   public void testUpdateStory() {
+    log.info("UpdateStoryEstimateTest", "Verify that is possible update estimate point in a Story.");
     CreateProjectPage project = home.clickCreateProject();
-    project.setProjectName("TestUpdateStory");
+    project.setProjectName("TestUpdateEstimatePoint");
     project.clickSelectAccount("Maria");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();
     storyPage = sideBarStories.clickOnAddStoryButton();
-    storyPage.setTitleStory("TestUpdateStory");
+    storyPage.setTitleStory("TestUpdateEstimatePoint");
     storyPage.clickOnCreateStory();
     storyPage.clickOnExpandStory();
 
     storyPage.setStoryEstimateIn2();
     assertEquals("2 Points", storyPage.getStoryEstimate());
+    log.info("UpdateStoryEstimateTest", "Expect result: Estimate Story was update to 2 points.");
   }
 
+  /**
+   * Delete project, story & logout.
+   */
   @AfterMethod
   public void clean() {
     storyPage.clickDeleteStory();
