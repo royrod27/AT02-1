@@ -13,7 +13,11 @@ public class StoryModel {
 
   public static final String editDescriptionButton = "//button[contains(.,'(edit)')]";
 
-  public static final String comment = "comment-edit-c225";
+  public static final String stories = "//div/section/div/div/div/header";
+
+  public static final String comment = ".//textarea[starts-with(@id,'comment')]";
+
+  public static final String comments = "//section/section[6]/div/ol/li/header/following-sibling::div[@class='tracker_markup']";
 
   public static final String addCommentButton = "button[data-aid='comment-submit']";
 
@@ -32,5 +36,9 @@ public class StoryModel {
   public static final String storyDeletedMessage = "//li[contains(.,'1 story deleted')]";
 
   public static final String cancelDeleteButton = "//button[@data-aid='CancelButton']";
+
+  public static final String storyEstimate = ".//a[starts-with(@id,'story_estimate_dropdown')]";
+
+  public static final String storyEstimateIn2 = ".//a[starts-with(@id,'2_story_estimate_dropdown')]";
 
 }
