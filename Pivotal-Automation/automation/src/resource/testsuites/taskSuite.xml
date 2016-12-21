@@ -9,7 +9,7 @@
             <class name="org.fundacion.automation.task.TestCreateTask"/>
             <class name="org.fundacion.automation.task.TestEditTask"/>
             <class name="org.fundacion.automation.task.TestDeleteTask"/>
-            <class name="org.fundacion.automation.task.TestCreateTaskWithoutName"/>
+            <class name="org.fundacion.automation.task.TestCannotCreateTaskWithoutName"/>
             <class name="org.fundacion.automation.task.TestCreateMultipleTaskWithTheSameName"/>
         </classes>
     </test>

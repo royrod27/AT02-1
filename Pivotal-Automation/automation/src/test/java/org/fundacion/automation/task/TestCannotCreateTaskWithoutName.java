@@ -12,20 +12,20 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-
+import static org.testng.AssertJUnit.assertTrue;
 
 /**
  * Created by Angelica Rodriguez on 12/19/2016.
  */
-public class TestCreateMultipleTaskWithTheSameName extends Base {
+public class TestCannotCreateTaskWithoutName extends Base {
   ProjectMenuPage projectMenuPage;
   StoryPage storyPage;
   SettingsPage settingsPage;
-  String title = "Test create multiple task with the same name";
-  String testClass = "testCreateMultipleTaskWithTheSameName";
+  String title = "Test cannot create task WithoutName";
+  String testClass = "testCannotCreateTaskWithoutName";
 
   @Test
-  public void testCreateMultipleTaskWithTheSameName() {
+  public void testCannotCreateTaskWithoutName() {
     log.info(testClass, title);
     driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
     LoginPage login = new LoginPage(driver);
@@ -33,27 +33,21 @@ public class TestCreateMultipleTaskWithTheSameName extends Base {
     login.clickContinue();
     login.setPassword("At24062406");
     home = login.clickSubmit();
-
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStoryWithTask");
     project.clickNewAccount("Task");
-
     projectMenuPage = project.clickCreate();
-
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();
     storyPage = sideBarStories.clickOnAddStoryButton();
     storyPage.setTitleStory("TestStory");
-
     TaskPage taskPage = storyPage.clickCreateTask(driver);
-    taskPage.addTask("new task3");
-    taskPage.addTask("new task3");
-    taskPage.addTask("new task3");
-    taskPage.addTask("new task3");
-    taskPage.addTask("new task3");
+    taskPage.addTask("");
+    assertTrue(taskPage.alertDialog().contains("Cannot Save Task"));
+    taskPage.clickButtonOk();
     storyPage.clickOnCreateStory();
     storyPage.clickOnExpandStory();
-    assertEquals(5, taskPage.sizeContentNameTask("new task3"));
-    log.info(testClass, "Verify that all 5 tasks are created correctly");
+    assertEquals(0, taskPage.sizeContentNameTask(""));
+    log.info(testClass, "Verify that the task is not created if it has no name");
   }
 
   @AfterMethod
@@ -62,5 +56,5 @@ public class TestCreateMultipleTaskWithTheSameName extends Base {
     settingsPage = projectMenuPage.clickSettings();
     settingsPage.deleteProject();
   }
-
 }
+

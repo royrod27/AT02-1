@@ -1,8 +1,5 @@
 package org.fundacion.model.projects;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
 /**
  * Created by Administrator on 12/13/2016.
  */
@@ -19,6 +16,6 @@ public class SettingsModel {
 
   public static final String saveBtn = ".save_bar__submit";
 
-  public static final String linkNameProjectAccount = "//*[@id=\"project_account_link\"]";
+  public static final String linkNameProjectAccount = "//b/a";
 
 }
