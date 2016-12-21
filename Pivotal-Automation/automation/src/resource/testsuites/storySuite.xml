@@ -8,7 +8,7 @@
         <classes>
             <class name="org.fundacion.automation.story.CreateStoryTest"/>
             <class name="org.fundacion.automation.story.CreateDescriptionTest"/>
-            <class name="org.fundacion.automation.story.CreateStoryTest"/>
+            <class name="org.fundacion.automation.story.UpdateStoryEstimateTest"/>
             <class name="org.fundacion.automation.story.DeleteStoryTest"/>
             <class name="org.fundacion.automation.story.CreateCommentTest"/>
         </classes>

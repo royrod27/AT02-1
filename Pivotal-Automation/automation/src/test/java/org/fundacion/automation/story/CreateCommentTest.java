@@ -39,7 +39,7 @@ public class CreateCommentTest extends Base {
     log.info("CreateCommentTest", "Verify that is possible add a comment on the story.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStoryComment");
-    project.clickSelectAccount("Maria");
+    project.clickSelectAccount("Jala");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();

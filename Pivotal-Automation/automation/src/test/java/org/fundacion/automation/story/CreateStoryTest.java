@@ -42,7 +42,7 @@ public class CreateStoryTest extends Base {
     log.info("CreateStoryTest", "Verify that is possible create a Story on the project.");
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestStory");
-    project.clickSelectAccount("Maria");
+    project.clickSelectAccount("Jala");
 
     projectMenuPage = project.clickCreate();
     SideBarStoriesPage sideBarStories = projectMenuPage.sideBarStories();

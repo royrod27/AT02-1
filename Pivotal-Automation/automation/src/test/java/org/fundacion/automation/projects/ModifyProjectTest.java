@@ -12,19 +12,14 @@ import static org.testng.Assert.assertTrue;
 
 
 public class ModifyProjectTest extends Base {
-  WebDriver driver;
-  HomePage home;
-
   @Test
   public void testCreateProject() {
-
-    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
-
+    log.info("ModifyProjectTest", "Verify that is possible modify the name of a project.");
+    driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
-
-    login.setUserName("gualy_vc@hotmail.com");
+    login.setUserName(configurationObj.getProperty("userName"));
     login.clickContinue();
-    login.setPassword("password123");
+    login.setPassword(configurationObj.getProperty("userPassword"));
     home = login.clickSubmit();
     CreateProjectPage newProject = home.clickCreateProject();
 
@@ -32,20 +27,14 @@ public class ModifyProjectTest extends Base {
     newProject.clickSelectAccount("Jala");
     ProjectMenuPage projectMenuPage = newProject.clickCreate();
 
-    //Change the name of the project
     SettingsPage settingsPage = projectMenuPage.clickSettings();
     String projectNameChanged = "TestNameChanged";
     settingsPage.editProjectName(projectNameChanged);
     assertTrue(driver.findElement(settingsPage.getTitleProject(projectNameChanged)).isDisplayed(),
             "Error the name of the project is different.");
+    log.info("ModifyProjectTest", "Expect result: The project created was changed the name.");
 
-    //Deleting the project
     settingsPage.deleteProject();
-   // driver.quit();
   }
 
-  @AfterMethod
-  public void logOutProfile(){
-    home.logOut();
-  }
 }

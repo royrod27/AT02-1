@@ -14,22 +14,20 @@ import static org.testng.Assert.assertFalse;
 /**
  * Created by Administrator on 12/13/2016.
  */
-public class CreatePublicProjectTest extends Base{
-  WebDriver driver;
-  HomePage home;
+public class CreatePublicProjectTest extends Base {
 
   @Test
   public void testCreatePublicProject() {
-//    driver = Driver.getDriver().openBrowser();
-    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
+    log.info("CreatePublicProjectTest", "Verify that is possible add a public project.");
+    driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
-    login.setUserName("jorge.forero@fundacion-jala.org");
+    login.setUserName(configurationObj.getProperty("userName"));
     login.clickContinue();
-    login.setPassword("jb&11235");
+    login.setPassword(configurationObj.getProperty("userPassword"));
     home = login.clickSubmit();
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName("TestPublic");
-    project.clickSelectAccount("Maria");
+    project.clickSelectAccount("Jala");
     project.selectPrivacy("public");
 
     ProjectMenuPage projectMenuPage = project.clickCreate();
@@ -38,13 +36,9 @@ public class CreatePublicProjectTest extends Base{
     boolean isPrivate = settingsPage.verifyPrivateAccess();
 
     assertFalse(isPrivate, "project is public");
+    log.info("CreatePrivateProjectTest", "Expect result: The project was created is public.");
     settingsPage.deleteProject();
 
-  }
-
-  @AfterMethod
-  public void logOutProfile(){
-    home.logOut();
   }
 
 }

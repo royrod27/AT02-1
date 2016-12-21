@@ -12,16 +12,16 @@ import static org.testng.Assert.assertTrue;
 
 public class TestCreateAccount extends Base {
   private String nameProject = "ProjectCreateNew3";
-  private String nameAccount = "AccountNew3";
+  private String nameAccount = "Jala";
 
   @Test
   public void createProjectWithNewAccountTest() {
-
-    driver.get("https://www.pivotaltracker.com/signin?signin_with_different=true");
+    log.info("TestCreateAccount", "Verify that is possible a account.");
+    driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
-    login.setUserName("angelica.rodriguez@fundacion-jala.org");
+    login.setUserName(configurationObj.getProperty("userName"));
     login.clickContinue();
-    login.setPassword("At24062406");
+    login.setPassword(configurationObj.getProperty("userPassword"));
     home = login.clickSubmit();
     CreateProjectPage project = home.clickCreateProject();
     project.setProjectName(nameProject);
@@ -29,6 +29,7 @@ public class TestCreateAccount extends Base {
     ProjectMenuPage projectPage = project.clickCreate();
     SettingsPage settingProject = projectPage.clickSettings();
     assertTrue(settingProject.contentNameAccount(nameAccount), "Error the name of the account is diferent.");
+    log.info("TestCreateAccount", "Expect result: The account was created.");
     settingProject.deleteProject();
   }
 }
