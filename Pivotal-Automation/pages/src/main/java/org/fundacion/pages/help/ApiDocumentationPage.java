@@ -56,9 +56,8 @@ public class ApiDocumentationPage {
         robot.keyRelease(KeyEvent.VK_CONTROL);
 
         apiDocumentationBtn.click();
-
-        flag = apiDocumentationBtn.getText().equals(driver.getTitle().contains("Essentials"));
-
+        flag = driver.getTitle().contains(apiDocumentationTitle.getText());
+        driver.close();
       }
     } catch (Exception exception) {
     }
