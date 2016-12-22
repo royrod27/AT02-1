@@ -13,7 +13,7 @@ import org.testng.ITestResult;
 
 
 public class Screenshot {
-  static SimpleDateFormat formatter = new SimpleDateFormat("MMddyyyy hh-mm-ss");
+  static SimpleDateFormat formatter = new SimpleDateFormat("MMddyyyy_hh-mm-ss");
   static Calendar now = Calendar.getInstance();
 
   public static String capture(WebDriver driver, ITestResult testResult) throws IOException {
