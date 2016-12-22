@@ -3,3 +3,140 @@
 2016-12-21 18:45:40 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
 2016-12-21 18:45:45 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
 2016-12-21 18:51:36 INFO  - Name of class: CreateCommentTestMessage: Verify that is possible add a comment on the story.
+2016-12-22 17:24:53 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 17:25:09 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 17:25:13 INFO  - Name of class: CreatePublicProjectTestMessage: Verify that is possible add a public project.
+2016-12-22 17:25:22 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is public.
+2016-12-22 17:25:27 INFO  - Name of class: ModifyProjectTestMessage: Verify that is possible modify the name of a project.
+2016-12-22 17:25:39 INFO  - Name of class: ModifyProjectTestMessage: Expect result: The project has correctly changed its name.
+2016-12-22 17:25:41 INFO  - Name of class: TestCreateAccountMessage: Verify that is possible a account.
+2016-12-22 17:25:56 INFO  - Name of class: TestCreateAccountMessage: Expect result: The account was created.
+2016-12-22 17:26:02 INFO  - Name of class: TestDeleteProjectMessage: Verify that is possible delete a project.
+2016-12-22 17:26:09 INFO  - Name of class: TestDeleteProjectMessage: Test Delete Project
+2016-12-22 17:26:21 INFO  - Name of class: TestDeleteProjectMessage: Expect result: the project was created does not exist
+2016-12-22 17:42:38 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 17:44:28 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 17:44:48 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 17:44:51 INFO  - Name of class: CreatePublicProjectTestMessage: Verify that is possible add a public project.
+2016-12-22 17:45:06 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is public.
+2016-12-22 17:45:08 INFO  - Name of class: ModifyProjectTestMessage: Verify that is possible modify the name of a project.
+2016-12-22 17:45:23 INFO  - Name of class: ModifyProjectTestMessage: Expect result: The project has correctly changed its name.
+2016-12-22 17:45:26 INFO  - Name of class: TestCreateAccountMessage: Verify that is possible a account.
+2016-12-22 17:45:38 INFO  - Name of class: TestCreateAccountMessage: Expect result: The account was created.
+2016-12-22 17:45:40 INFO  - Name of class: TestDeleteProjectMessage: Verify that is possible delete a project.
+2016-12-22 17:45:46 INFO  - Name of class: TestDeleteProjectMessage: Test Delete Project
+2016-12-22 17:45:56 INFO  - Name of class: TestDeleteProjectMessage: Expect result: the project was created does not exist
+2016-12-22 17:50:16 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 17:50:36 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 17:51:49 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 17:52:02 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 17:54:09 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 17:54:26 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 17:54:35 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 17:54:41 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 17:54:53 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 17:55:00 INFO  - Name of class: TestCreateTaskMessage: Verify that the task is create correctly
+2016-12-22 17:55:51 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 17:56:11 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 17:56:32 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 17:56:38 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 17:56:50 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 18:17:23 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 18:17:38 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 18:17:48 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 18:17:55 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 18:18:15 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 18:18:22 INFO  - Name of class: TestCreateTaskMessage: Verify that the task is create correctly
+2016-12-22 18:21:06 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 18:21:21 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 18:22:17 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 18:22:36 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 18:44:21 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 18:44:38 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 18:45:13 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 18:45:28 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 18:48:13 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 18:48:26 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 18:56:17 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 18:56:31 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 18:56:39 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 18:56:45 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 18:57:01 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 18:57:08 INFO  - Name of class: TestCreateTaskMessage: Verify that the task is create correctly
+2016-12-22 18:57:18 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-22 18:57:24 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-22 18:59:49 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:00:04 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:00:14 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:00:20 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:00:46 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 19:00:52 INFO  - Name of class: TestCreateTaskMessage: Verify that the task is create correctly
+2016-12-22 19:01:04 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-22 19:01:08 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-22 19:04:09 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:04:25 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:04:35 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:04:42 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:04:54 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 19:05:02 INFO  - Name of class: TestCreateTaskMessage: Verify that the task is create correctly
+2016-12-22 19:05:19 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-22 19:05:27 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-22 19:07:17 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:07:34 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:07:40 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:07:49 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:08:05 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 19:08:12 INFO  - Name of class: TestCreateTaskMessage: Verify that the task is create correctly
+2016-12-22 19:09:23 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:09:36 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:09:44 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:09:50 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:10:07 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-22 19:10:10 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-22 19:11:29 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:11:42 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:11:51 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:11:57 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:12:11 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-22 19:12:14 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-22 19:20:11 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:20:26 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:20:37 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:20:43 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:20:55 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-22 19:20:58 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
+2016-12-22 19:22:02 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:22:18 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:24:04 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:24:21 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:26:19 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:26:33 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:26:43 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:26:53 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:27:23 INFO  - Name of class: TestCreateWorkspaceMessage: Verify that is possible create a Workspace.
+2016-12-22 19:28:57 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:29:12 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:29:20 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:29:27 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:31:15 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:31:22 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:31:49 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:32:07 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:32:50 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:34:04 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:34:13 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:34:19 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:37:41 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:37:53 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:38:04 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:38:10 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:38:43 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:38:58 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:39:09 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:39:15 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:40:08 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-22 19:40:29 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-22 19:40:36 INFO  - Name of class: CreateStoryTestMessage: Verify that is possible create a Story on the project.
+2016-12-22 19:40:41 INFO  - Name of class: CreateStoryTestMessage: Expect result: Story test was add on the project.
+2016-12-22 19:40:51 INFO  - Name of class: TestCreateTaskMessage: Test create task
+2016-12-22 19:40:58 INFO  - Name of class: TestCreateTaskMessage: Verify that the task is create correctly

@@ -50,7 +50,11 @@ public class ExtentListener implements ITestListener {
     test.get().fail(testResult.getThrowable());
 
 
-    driver = Driver.getDriver().openBrowser();
+    try {
+      driver = Driver.getDriver().openBrowser();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
     try {
       test.get().log(Status.FAIL, testResult.getName() + "_"
               + formatter.format(now.getTime()) + ".png")

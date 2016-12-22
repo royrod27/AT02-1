@@ -4,12 +4,12 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
-    <test name="HelpTestClasses">
+    <test name="HelpTest">
         <classes>
-            <class name="org.fundacion.automation.help.TestVerifyQuickStartPage"/>
-            <class name="org.fundacion.automation.help.TestLearnMore"/>
-            <class name="org.fundacion.automation.help.TestFeedBack"/>
-            <class name="org.fundacion.automation.help.TestContactSupport"/>
+            <!--<class name="org.fundacion.automation.help.TestVerifyQuickStartPage"/>-->
+            <!--<class name="org.fundacion.automation.help.TestLearnMore"/>-->
+            <!--<class name="org.fundacion.automation.help.TestFeedBack"/>-->
+            <!--<class name="org.fundacion.automation.help.TestContactSupport"/>-->
         </classes>
     </test>
 </suite>

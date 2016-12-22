@@ -44,10 +44,4 @@ public class Base {
     home.logOut();
   }
 
-
-  @AfterSuite
-  public void close() {
-    driver.close();
-  }
-
 }

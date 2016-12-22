@@ -1,19 +1,19 @@
 package org.fundacion.automation.projects;
 
-import org.fundacion.pages.home.HomePage;
+import static org.testng.Assert.assertTrue;
+
 import org.fundacion.pages.login.LoginPage;
 import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.projects.ProjectMenuPage;
 import org.fundacion.pages.projects.SettingsPage;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
+
 
 
 public class ModifyProjectTest extends Base {
   @Test
-  public void testCreateProject() {
+  public void testModifyProject() {
     log.info("ModifyProjectTest", "Verify that is possible modify the name of a project.");
     driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
@@ -32,7 +32,7 @@ public class ModifyProjectTest extends Base {
     settingsPage.editProjectName(projectNameChanged);
     assertTrue(driver.findElement(settingsPage.getTitleProject(projectNameChanged)).isDisplayed(),
             "Error the name of the project is different.");
-    log.info("ModifyProjectTest", "Expect result: The project created was changed the name.");
+    log.info("ModifyProjectTest", "Expect result: The project has correctly changed its name.");
 
     settingsPage.deleteProject();
   }
