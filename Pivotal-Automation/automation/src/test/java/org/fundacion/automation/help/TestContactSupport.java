@@ -2,12 +2,10 @@ package org.fundacion.automation.help;
 
 import org.fundacion.automation.projects.Base;
 import org.fundacion.pages.help.ContactSupportPage;
-import org.fundacion.pages.help.FeedBackPage;
 import org.fundacion.pages.login.LoginPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import static org.testng.AssertJUnit.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by fmiquiza on 22/12/2016.
