@@ -1,6 +1,6 @@
 package org.fundacion.automation.help;
 
-import static org.testng.AssertJUnit.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 import org.fundacion.automation.projects.Base;
 import org.fundacion.pages.help.HelpPageMain;

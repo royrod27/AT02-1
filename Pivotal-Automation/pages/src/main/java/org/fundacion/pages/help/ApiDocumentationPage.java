@@ -33,6 +33,10 @@ public class ApiDocumentationPage {
   @FindBy(xpath = ApiDocumentationModel.apiDocumentationTitle)
   WebElement apiDocumentationTitle;
 
+  public void clickApiDocumentationBtn() {
+    apiDocumentationBtn.click();
+  }
+
   /** Verify API Documentation page.
      *
      * @return True if Title is verified.
@@ -55,7 +59,7 @@ public class ApiDocumentationPage {
         robot.keyRelease(KeyEvent.VK_TAB);
         robot.keyRelease(KeyEvent.VK_CONTROL);
 
-        apiDocumentationBtn.click();
+        clickApiDocumentationBtn();
         flag = driver.getTitle().contains(apiDocumentationTitle.getText());
         driver.close();
       }
@@ -63,4 +67,5 @@ public class ApiDocumentationPage {
     }
     return flag;
   }
+
 }

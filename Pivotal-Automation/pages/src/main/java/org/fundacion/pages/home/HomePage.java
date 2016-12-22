@@ -99,4 +99,5 @@ public class HomePage {
     helpLink.click();
     return new ApiDocumentationPage(driver);
   }
+
 }

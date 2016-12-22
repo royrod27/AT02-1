@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 
 /**
@@ -55,6 +56,9 @@ public class ExtentListener implements ITestListener {
       test.get().log(Status.FAIL, testResult.getName() + "_"
               + formatter.format(now.getTime()) + ".png")
               .addScreenCaptureFromPath(screenshot.capture(driver, testResult));
+      System.setProperty("org.uncommons.reportng.escape-output", "false");
+      Reporter.log("<a href=../" +screenshot.capture(driver, testResult)+ "> " + testResult.getName() +  ".png </a>");
+
     } catch (IOException exception) {
       exception.printStackTrace();
     }

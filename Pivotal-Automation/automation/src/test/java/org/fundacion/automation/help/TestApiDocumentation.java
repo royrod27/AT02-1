@@ -2,18 +2,18 @@ package org.fundacion.automation.help;
 
 import org.fundacion.automation.projects.Base;
 import org.fundacion.pages.help.ApiDocumentationPage;
-import org.fundacion.pages.help.FeedBackPage;
+import org.fundacion.pages.help.ContactSupportPage;
 import org.fundacion.pages.login.LoginPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by Administrator on 12/22/2016.
  */
 public class TestApiDocumentation extends Base{
-  String title = "Test API Documentation Page";
+  String title = "Test Api Documentation Page";
   String testClass = "TestApiDocumentation";
 
   /** Login Method.
@@ -30,13 +30,14 @@ public class TestApiDocumentation extends Base{
   }
 
   @Test
-  public void verifyApiDocumentationPageTitleIsTheSameAsPageTab() {
+  public void verifyApiDocTabPageContainsApiDocTitleEssentials() {
     log.info(testClass, title);
 
     ApiDocumentationPage apiDocumentationPage = home.clickApiDocumentationLink();
     assertTrue(apiDocumentationPage.verifyApiDocumentation());
 
-    log.info(testClass, "Verify that API Docs page title >> Essentials << is contained in the Page tab title");
+    log.info(testClass, "Verify that Api Documentation Tab Page has Essential keyword in the Title of Loaded Page");
   }
 }
+
 
