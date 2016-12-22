@@ -10,6 +10,7 @@
             <class name="org.fundacion.automation.help.TestLearnMore"/>
             <class name="org.fundacion.automation.help.TestFeedBack"/>
             <class name="org.fundacion.automation.help.TestContactSupport"/>
+            <class name="org.fundacion.automation.help.TestApiDocumentation"/>
         </classes>
     </test>
 </suite>

@@ -36,9 +36,6 @@ public class TestContactSupport extends Base {
         ContactSupportPage contactSupportPage = home.clickContactSupportLink();
         assertTrue(contactSupportPage.verifyContactSupport());
 
-        FeedBackPage feedBackPage = home.clickGiveUsFeedBackLink();
-        assertTrue(feedBackPage.verifyFeedBack());
-
         log.info(testClass, "Verify that Contact Link redirects to Contact Support and page title is ¨Contact Support");
     }
 }

@@ -1,10 +1,11 @@
 package org.fundacion.pages.home;
 
 import org.fundacion.model.home.HomeModel;
-import org.fundacion.pages.help.ContactSupportPage;
+import org.fundacion.pages.help.ApiDocumentationPage;
 import org.fundacion.pages.help.FeedBackPage;
-import org.fundacion.pages.help.HelpPageMain;
 import org.fundacion.pages.help.LearnMorePage;
+import org.fundacion.pages.help.HelpPageMain;
+import org.fundacion.pages.help.ContactSupportPage;
 import org.fundacion.pages.projects.CreateProjectPage;
 import org.fundacion.pages.projects.ProjectsWorkSpacesPage;
 import org.fundacion.pages.workspaces.CreateWorkspacePage;
@@ -94,4 +95,8 @@ public class HomePage {
     return new ContactSupportPage(driver);
   }
 
+  public ApiDocumentationPage clickApiDocumentationLink() {
+    helpLink.click();
+    return new ApiDocumentationPage(driver);
+  }
 }
