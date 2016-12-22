@@ -1,6 +1,7 @@
 package org.fundacion.pages.home;
 
 import org.fundacion.model.home.HomeModel;
+import org.fundacion.pages.help.ContactSupportPage;
 import org.fundacion.pages.help.FeedBackPage;
 import org.fundacion.pages.help.HelpPageMain;
 import org.fundacion.pages.help.LearnMorePage;
@@ -86,6 +87,11 @@ public class HomePage {
   public FeedBackPage clickGiveUsFeedBackLink() {
     helpLink.click();
     return new FeedBackPage(driver);
+  }
+
+  public ContactSupportPage clickContactSupportLink() {
+    helpLink.click();
+    return new ContactSupportPage(driver);
   }
 
 }

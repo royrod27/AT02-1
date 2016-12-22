@@ -9,6 +9,7 @@
             <class name="org.fundacion.automation.help.TestVerifyQuickStartPage"/>
             <class name="org.fundacion.automation.help.TestLearnMore"/>
             <class name="org.fundacion.automation.help.TestFeedBack"/>
+            <class name="org.fundacion.automation.help.TestContactSupport"/>
         </classes>
     </test>
 </suite>

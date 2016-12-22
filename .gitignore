@@ -11,3 +11,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 Pivotal-Automation/.idea/workspace.xml
+Pivotal-Automation/automation/logs/
+Pivotal-Automation/automation/reports/
+Pivotal-Automation/automation/target/
+Pivotal-Automation/automation/automation.iml
+Pivotal-Automation/common/target/
+Pivotal-Automation/model/target/
+Pivotal-Automation/pages/target/
