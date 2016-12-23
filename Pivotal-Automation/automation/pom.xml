@@ -53,7 +53,7 @@
                             <value>org.uncommons.reportng.HTMLReporter,
                                 org.uncommons.reportng.JUnitXMLReporter,
                                 org.fundacion.common.listener.ExtentListener,
-                                org.fundacion.common.listener.SuiteListener
+                                org.fundacion.common.listener.ExecutionListener
                             </value>
                         </property>
                     </properties>
