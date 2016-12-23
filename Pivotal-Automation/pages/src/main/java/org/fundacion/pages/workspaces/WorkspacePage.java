@@ -54,6 +54,7 @@ public class WorkspacePage {
    * @return SettingsWorkspacePage class with this driver.
    */
   public SettingsWorkspacePage settingsWorkspace() {
+    wait.until(ExpectedConditions.titleIs(driver.getTitle()));
     wait.until(ExpectedConditions.elementToBeClickable(setting));
     setting.click();
     return new SettingsWorkspacePage(driver);

@@ -356,3 +356,13 @@
 2016-12-23 08:47:50 INFO  - Name of class: TestCreateWorkspaceMessage: Expect result: A new workspace was create success.
 2016-12-23 08:48:25 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
 2016-12-23 08:48:46 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-23 08:57:09 INFO  - Name of class: CreatePrivateProjectTestMessage: Verify that is possible add a private project.
+2016-12-23 08:57:24 INFO  - Name of class: CreatePrivateProjectTestMessage: Expect result: The project was created is private.
+2016-12-23 08:58:12 INFO  - Name of class: TestVerifyQuickStartPageMessage: Test Quick Start Page
+2016-12-23 08:58:39 INFO  - Name of class: TestVerifyQuickStartPageMessage: Verify that Quick Start title is the same as the Quick Page tab title
+2016-12-23 08:58:51 INFO  - Name of class: TestLearnMoreMessage: Test Learn More Page
+2016-12-23 08:59:18 INFO  - Name of class: TestLearnMoreMessage: Verify that Learn More page title is the same as the Learn More tab
+2016-12-23 08:59:25 INFO  - Name of class: TestFeedBackMessage: Test FeedBack Page
+2016-12-23 08:59:51 INFO  - Name of class: TestFeedBackMessage: Verify that FeedBack page title is the same as the feedback tab title
+2016-12-23 08:59:59 INFO  - Name of class: TestContactSupportMessage: Test Contact Support Page
+2016-12-23 09:00:25 INFO  - Name of class: TestContactSupportMessage: Verify that Contact Link redirects to Contact Support and page title is ¨Contact Support

@@ -95,9 +95,4 @@ public class HomePage {
     return new ContactSupportPage(driver);
   }
 
-  public ApiDocumentationPage clickApiDocumentationLink() {
-    helpLink.click();
-    return new ApiDocumentationPage(driver);
-  }
-
 }
