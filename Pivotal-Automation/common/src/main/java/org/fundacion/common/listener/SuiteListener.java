@@ -3,6 +3,7 @@ package org.fundacion.common.listener;
 import java.io.IOException;
 
 import org.fundacion.common.drivers.Driver;
+import org.fundacion.common.objectReader.ReadObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -21,11 +22,9 @@ public class SuiteListener implements ISuiteListener {
   public void onFinish(ISuite suite) {
     XmlSuite xmlSuite = suite.getXmlSuite();
     if (xmlSuite.getTests().isEmpty()) {
-      try {
-        driver = Driver.getDriver().openBrowser();
+      driver = Driver.getDriver().getWebDriver();
+      if (driver != null) {
         driver.quit();
-      } catch (IOException excep) {
-        excep.printStackTrace();
       }
     }
   }

@@ -3,14 +3,15 @@
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="org.fundacion.common.listener.SuiteListener" />
     </listeners>
     <test name="WorkspaceTest">
         <classes>
             <class name="org.fundacion.automation.workspaces.TestCreateWorkspace"/>
-            <class name="org.fundacion.automation.workspaces.TestDeleteWorkspace"/>
-            <class name="org.fundacion.automation.workspaces.AddWorkspaceProjects"/>
-            <class name="org.fundacion.automation.workspaces.RemoveWorkspaceProjects"/>
-            <class name="org.fundacion.automation.workspaces.DeleteWorkspaceWithProject"/>
+            <!--<class name="org.fundacion.automation.workspaces.TestDeleteWorkspace"/>-->
+            <!--<class name="org.fundacion.automation.workspaces.AddWorkspaceProjects"/>-->
+            <!--<class name="org.fundacion.automation.workspaces.RemoveWorkspaceProjects"/>-->
+            <!--<class name="org.fundacion.automation.workspaces.DeleteWorkspaceWithProject"/>-->
         </classes>
     </test>
 </suite>

@@ -52,4 +52,8 @@ public class Driver {
     }
     return instance;
   }
+
+  public WebDriver getWebDriver() {
+    return driver;
+  }
 }

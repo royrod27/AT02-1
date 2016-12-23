@@ -6,9 +6,9 @@
 
     <suite-files>
         <suite-file path="./projectsSuite.xml"></suite-file>
-        <suite-file path="./storySuite.xml"></suite-file>
-        <suite-file path="./taskSuite.xml"></suite-file>
+        <!--<suite-file path="./storySuite.xml"></suite-file>-->
+        <!--<suite-file path="./taskSuite.xml"></suite-file>-->
         <suite-file path="./workspaceSuite.xml"></suite-file>
-        <suite-file path="./helpSuite.xml"></suite-file>
+        <!--<suite-file path="./helpSuite.xml"></suite-file>-->
     </suite-files>
 </suite>
