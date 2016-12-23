@@ -13,10 +13,6 @@ public class Tests {
 
   @Test
   public void testGetAllProjects() throws IOException {
-    RestAssured restAssured = new RestAssured();
-
-    JsonPath res = restAssured.get("projects");
-    System.out.println(res.getList("id").get(0).getClass());
 
     ApiProjects projects = new ApiProjects();
     List<Project> projectList = projects.getAllProjectsNames();
@@ -30,14 +26,14 @@ public class Tests {
   @Test
   public void getProject() throws IOException {
     ApiProjects projects = new ApiProjects();
-    Project project = projects.getProjectByName("asdf");
+    Project project = projects.getProjectByName("Test");
     System.out.println(project.getId());
   }
 
   @Test
   public void testDelete() throws IOException {
     ApiProjects projects = new ApiProjects();
-    System.out.println(projects.deleteProjectByName("asdf"));
+    System.out.println(projects.deleteProjectByName("Test"));
   }
 
   @Test
