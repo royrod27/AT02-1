@@ -77,11 +77,7 @@ public class StoryPage {
   }
 
   public void setTitleStory(String name) {
-    try {
-      Thread.sleep(1000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+
     storyTitleTextArea.sendKeys(name);
   }
 
@@ -119,12 +115,6 @@ public class StoryPage {
     comment.clear();
     comment.sendKeys(storyComment);
     addCommentButton.click();
-    try {
-      Thread.sleep(1000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-
   }
 
   public void setStoryEstimateIn2() {
@@ -135,11 +125,7 @@ public class StoryPage {
   public void clickDeleteStory() {
     deleteStoryButton.click();
     confirmDeleteButton.click();
-    try {
-      Thread.sleep(1000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
+
   }
 
   public Boolean verifyDeleteStory(String projectName) {
