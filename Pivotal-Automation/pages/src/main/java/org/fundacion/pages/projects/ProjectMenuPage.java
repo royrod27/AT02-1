@@ -45,9 +45,14 @@ public class ProjectMenuPage {
   }
 
   public SettingsPage clickSettings() {
-    wait.until(ExpectedConditions.elementToBeClickable(projectNameElement));
-    wait.until(ExpectedConditions.elementToBeClickable(epicsButton));
-    settingsBtn.click();
+    try {
+      Thread.sleep(1000);
+      wait.until(ExpectedConditions.elementToBeClickable(projectNameElement));
+      wait.until(ExpectedConditions.elementToBeClickable(epicsButton));
+      settingsBtn.click();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
     return new SettingsPage(driver);
   }
 
