@@ -1,6 +1,10 @@
 package org.fundacion.common.drivers;
 
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import org.fundacion.common.objectReader.ReadObject;
 import org.fundacion.common.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,12 +25,14 @@ public class Driver {
    *
    * @return the driver of that browser was initialize.
    */
-  public WebDriver openBrowser() {
+  public WebDriver openBrowser() throws IOException {
     if (chrome == null) {
-      driver = new WebDriverFactory("chrome").getDriver();
+      ReadObject object = new ReadObject();
+      Properties configurationObj = object.getObjectRepository();
+      driver = new WebDriverFactory(configurationObj.getProperty("browser")).getDriver();
       driver.manage().timeouts().implicitlyWait(14, TimeUnit.SECONDS);
       driver.manage().window().maximize();
-      driver.get("https://www.pivotaltracker.com/signin");
+      driver.get(configurationObj.getProperty("url"));
       chrome = driver;
     } else if (chrome != null) {
       driver = chrome;

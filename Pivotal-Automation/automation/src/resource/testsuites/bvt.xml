@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="BVT" parallel="instances" thread-count="5">
+    <listeners>
+        <listener class-name="org.fundacion.common.listener.SuiteListener" />
+    </listeners>
+
     <suite-files>
         <suite-file path="./projectsSuite.xml"></suite-file>
         <suite-file path="./storySuite.xml"></suite-file>
         <suite-file path="./taskSuite.xml"></suite-file>
         <suite-file path="./workspaceSuite.xml"></suite-file>
+        <suite-file path="./helpSuite.xml"></suite-file>
     </suite-files>
 </suite>
