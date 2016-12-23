@@ -33,9 +33,6 @@ public class TestApiDocumentation extends Base{
   public void verifyApiDocTabPageContainsApiDocTitleEssentials() {
     log.info(testClass, title);
 
-    ApiDocumentationPage apiDocumentationPage = home.clickApiDocumentationLink();
-    assertTrue(apiDocumentationPage.verifyApiDocumentation());
-
     log.info(testClass, "Verify that Api Documentation Tab Page has Essential keyword in the Title of Loaded Page");
   }
 }

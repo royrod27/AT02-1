@@ -39,11 +39,5 @@ public class Base {
   @AfterClass
   public void logOutProfile() {
     home.logOut();
-//    driver.close();
   }
-
-//  @AfterSuite
-//  public void close(){
-//    driver.close();
-//  }
 }
