@@ -6,10 +6,7 @@ import org.fundacion.common.objectReader.ReadObject;
 import org.fundacion.common.utilities.Log;
 import org.fundacion.pages.home.HomePage;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -42,6 +39,11 @@ public class Base {
   @AfterClass
   public void logOutProfile() {
     home.logOut();
+//    driver.close();
   }
 
+//  @AfterSuite
+//  public void close(){
+//    driver.close();
+//  }
 }
