@@ -7,7 +7,9 @@ import io.restassured.path.json.JsonPath;
 import java.io.IOException;
 import java.util.Properties;
 
+import io.restassured.response.Response;
 import org.fundacion.common.objectReader.ReadObject;
+import sun.security.tools.keytool.Resources_sv;
 
 
 /**
@@ -18,7 +20,8 @@ public class RestAssured {
   private String url;
   private String token;
   private String keyToken;
-
+  private String proxyAddress;
+  private int proxyPort;
   public RestAssured() throws IOException {
     ReadObject object = new ReadObject();
     configurationObj = object.getObjectRepository();
@@ -26,23 +29,21 @@ public class RestAssured {
     url = configurationObj.getProperty("urlApi");
     token = configurationObj.getProperty("token");
     keyToken = configurationObj.getProperty("keyToken");
+    proxyAddress = configurationObj.getProperty("proxy");
+    proxyPort = Integer.parseInt(configurationObj.getProperty("port"));
 
   }
 
-  public JsonPath get(String endPoint) {
+  public Response get(String endPoint) {
     String finalUrl = url + "/" + endPoint;
-    JsonPath response = given().header(keyToken, token).get(finalUrl).jsonPath();
+    Response response = given().proxy(proxyAddress, proxyPort).header(keyToken, token).get(finalUrl);
     return response;
   }
 
-  public boolean delete(String endPoint) {
-    boolean res = false;
+  public Response delete(String endPoint) {
     String finalUrl = url + "/" + endPoint;
-    if (given().header(keyToken, token).delete(finalUrl).statusCode() == 204) {
-      res = true;
-    }
-
-    return res;
+    Response response = given().proxy(proxyAddress, proxyPort).header(keyToken, token).delete(finalUrl);
+    return response;
   }
 
 }

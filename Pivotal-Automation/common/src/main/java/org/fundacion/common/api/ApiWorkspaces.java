@@ -13,9 +13,9 @@ public class ApiWorkspaces {
 
     RestAssured restAssured = new RestAssured();
 
-    List<String> listNames = restAssured.get("my/workspaces").getList("name");
-    List<Integer> listId = restAssured.get("my/workspaces").getList("id");
-    List<String> listKind = restAssured.get("my/workspaces").getList("kind");
+    List<String> listNames = restAssured.get("my/workspaces").jsonPath().getList("name");
+    List<Integer> listId = restAssured.get("my/workspaces").jsonPath().getList("id");
+    List<String> listKind = restAssured.get("my/workspaces").jsonPath().getList("kind");
 
     for (int index = 0; index < listNames.size(); index++) {
       Workspace workspace = new Workspace();
@@ -38,12 +38,17 @@ public class ApiWorkspaces {
   }
 
   public boolean deleteWorkspaceByName(String nameOfWorkspace) throws IOException {
-    boolean res = false;
+    IllegalArgumentException exception= new IllegalArgumentException(nameOfWorkspace + "doesn't exist.");
     RestAssured restAssured = new RestAssured();
     Integer id = getWorkspaceByName(nameOfWorkspace).getId();
     String endPoint = "my/workspaces" + "/" + id;
 
-    return restAssured.delete(endPoint);
+    if(restAssured.delete(endPoint).statusCode() == 204) {
+      return true;
+    }
+    else {
+      throw exception;
+    }
   }
 
   public boolean deleteAllWorkspaces() throws IOException {

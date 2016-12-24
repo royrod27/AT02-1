@@ -14,9 +14,9 @@ public class ApiProjects {
 
     RestAssured restAssured = new RestAssured();
 
-    List<String> listNames = restAssured.get("projects").getList("name");
-    List<Integer> listId = restAssured.get("projects").getList("id");
-    List<String> listKind = restAssured.get("projects").getList("kind");
+    List<String> listNames = restAssured.get("projects").jsonPath().getList("name");
+    List<Integer> listId = restAssured.get("projects").jsonPath().getList("id");
+    List<String> listKind = restAssured.get("projects").jsonPath().getList("kind");
 
     for (int index = 0; index < listNames.size(); index++) {
       Project project = new Project();
@@ -39,9 +39,17 @@ public class ApiProjects {
 
   public boolean deleteProjectByName(String nameOfProject) throws IOException {
     RestAssured restAssured = new RestAssured();
+    IllegalArgumentException exception= new IllegalArgumentException(nameOfProject + "doesn't exist.");
+
     Integer id = getProjectByName(nameOfProject).getId();
     String endPoint = "projects" + "/" + id;
-    return restAssured.delete(endPoint);
+
+    if(restAssured.delete(endPoint).statusCode() == 204) {
+      return true;
+    }
+    else {
+      throw exception;
+    }
   }
 
   public boolean deleteAllProjects() throws IOException {

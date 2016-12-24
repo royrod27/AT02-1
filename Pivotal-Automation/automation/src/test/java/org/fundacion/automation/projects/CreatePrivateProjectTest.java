@@ -1,5 +1,6 @@
 package org.fundacion.automation.projects;
 
+import org.fundacion.common.api.ApiProjects;
 import org.fundacion.common.drivers.Driver;
 import org.fundacion.pages.home.HomePage;
 import org.fundacion.pages.login.LoginPage;
@@ -9,6 +10,8 @@ import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
+import java.io.IOException;
+
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -17,8 +20,9 @@ import static org.testng.Assert.assertTrue;
 public class CreatePrivateProjectTest extends Base {
 
   @Test
-  public void createPrivateProject() {
+  public void createPrivateProject() throws IOException {
     log.info("CreatePrivateProjectTest", "Verify that is possible add a private project.");
+    ApiProjects projects = new ApiProjects();
 
     driver.get(configurationObj.getProperty("url"));
     LoginPage login = new LoginPage(driver);
@@ -39,7 +43,7 @@ public class CreatePrivateProjectTest extends Base {
 
     assertTrue(isPrivate, "project is not private");
     log.info("CreatePrivateProjectTest", "Expect result: The project was created is private.");
-    settingsPage.deleteProject();
+    projects.deleteProjectByName(nameOfProject);
   }
 
 }
