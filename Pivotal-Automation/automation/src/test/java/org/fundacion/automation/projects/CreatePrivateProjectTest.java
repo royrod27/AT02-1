@@ -9,6 +9,7 @@ import org.fundacion.pages.projects.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -37,7 +38,7 @@ public class CreatePrivateProjectTest extends Base {
 
     boolean isPrivate = settingsPage.verifyPrivateAccess();
 
-    assertTrue(isPrivate, "project is not private");
+    assertFalse(isPrivate, "project is not private");
     log.info("CreatePrivateProjectTest", "Expect result: The project was created is private.");
     settingsPage.deleteProject();
   }
