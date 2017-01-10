@@ -19,33 +19,33 @@ public class LoginSteps {
   LoginPage loginPage;
 
   @Given("^I am on the Pivotal Tracker login page$")
-  public void iAmOnThePivotalTrackerLoginPage() throws Throwable {
+  public void loginWebPage() throws Throwable {
     driver = Driver.getDriver().openBrowser();
   }
 
   @When("^I insert my account name (.*?)$")
-  public void i_insert_my_account_name_Roy_Rodriguez_fundacion_jala_org(String userName) throws Throwable {
+  public void insertAccount(String userName) throws Throwable {
     loginPage = new LoginPage(driver);
     loginPage.setUserName(userName);
   }
 
   @When("^I press NEXT button$")
-  public void i_press_NEXT_button() throws Throwable {
+  public void pressNextButton() throws Throwable {
     loginPage.clickContinue();
   }
 
   @When("^I insert my password (.*?)$")
-  public void i_insert_my_password_Sabbath(String password) throws Throwable {
+  public void insertPassword(String password) throws Throwable {
     loginPage.setPassword(password);
   }
 
   @When("^I press SIGN IN button$")
-  public void i_press_SIGN_IN_button() throws Throwable {
+  public void pressSingIn() throws Throwable {
     loginPage.clickSubmit();
   }
 
   @Then("^I should see the HomePage of Pivotal Tracker (.*?)$")
-  public void i_should_see_the_HomePage_of_Pivotal_Tracker(String dashboardPage) throws Throwable {
+  public void dashboardVerification(String dashboardPage) throws Throwable {
     String actualWebPage = driver.getCurrentUrl();
     assertEquals(actualWebPage, dashboardPage);
   }
