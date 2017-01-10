@@ -2,7 +2,7 @@
 <suite name="CucumberSuite">
     <test name="Login on Pivotal">
         <classes>
-            <class name="org.bdd.automation.login.LoginRunner"></class>
+            <class name="org.bdd.automation.task.TasksRunner"></class>
         </classes>
     </test>
 </suite>
