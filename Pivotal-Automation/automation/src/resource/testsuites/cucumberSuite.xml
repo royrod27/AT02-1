@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="CucumberSuite">
+    <test name="Login on Pivotal">
+        <classes>
+            <class name="org.bdd.automation.login.LoginRunner"></class>
+        </classes>
+    </test>
+</suite>
